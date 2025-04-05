@@ -1,0 +1,612 @@
+.container-fluid{
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mynav {
+    background: none;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 10px;
+    box-sizing: border-box;
+   
+   
+}
+.mynav>.container-fluid{
+padding-left: 10%;
+padding-right: 10%;
+}
+.nav-link {
+    color: white !important;  /* Force all links to be white */
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white !important; /* Ensure color is white on hover */
+}
+
+.nav-link.active {
+    color: white !important; /* Active link remains white */
+    text-decoration: none;
+}
+
+/* Underline animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease;
+}
+
+.nav-link.active::after {
+    width: 100%; /* Active link shows the full underline */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px black;
+}
+
+body{
+    overflow-x: hidden;
+}
+@media (max-width: 700px) {
+    .navbar {
+        width: 100vw;
+    
+    }
+
+    .nav-item {
+        background: rgb(50, 49, 49);
+        padding: 5%;
+    }
+}
+
+body {
+    height: 300vh;
+}
+
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+#home {
+    background-color: rgb(123, 123, 200);
+}
+ #mainContent{
+    display: block;
+ }
+#about {
+    background-color: rgb(63, 63, 75);
+}
+
+
+.navbar-toggler{
+   background-color: #007bff;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.c1 {
+    display:none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: rgb(123, 123, 200);
+    height: 100vh;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+     position: relative;
+   
+}
+
+  
+.fixed-bg-div {
+    background-image: url(home.jpg); /* Path to your image */
+    background-attachment: fixed; /* Makes the background fixed */
+    background-size: cover; /* Makes sure the background image covers the entire div */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Set a height to make the effect visible */
+    width: 100%;
+    overflow-x: hidden;
+    color: white; /* Text color for better contrast, if necessary */
+  }
+
+.c1>.row{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.c1img {
+    display: grid;
+    place-items: center;
+}
+
+
+
+/* Fix for column styles */
+.c1>.row>.col-lg-6 {
+    padding: 20px;
+}
+
+.c1>.row>.col-lg-6 img {
+    width: 90%; /* Make image responsive */
+    max-width: 100%;
+    height: 100%;
+}
+.btnc1 {
+  background:none;
+  border: none;
+  color: black;
+  width:80px
+}
+
+.btnc1:hover {
+  color: white
+}
+
+.container-fluid {
+    overflow: hidden; /* Ensure no overflow within the container */
+    padding: 0; /* Optional: remove any padding if needed */
+}
+/*  */
+
+#about{
+background: black;
+height:115vh;
+margin-top: 1%;
+
+color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swiper-container {
+        height: 80px !important; /* Set the height to 80px */
+        background-color: white; /* Set background to white */
+        overflow: hidden;
+        width:85%;
+        border: 1px solid black;
+        padding: 1%;
+        
+        
+    }
+   
+
+    /* Optional: You can also style the slides inside the Swiper */
+    
+    .swiplength>.col{
+       height: 70px;
+        transform: translateY(-55px);
+         margin:  0 2% 0 2% ;
+        background-image:url(flag.jpg);
+        background-size: cover;
+        overflow-y: hidden;
+        min-width: 100px;
+        
+       
+        
+    }
+   
+    @media (max-width: 1000px){
+        .swiplength>.col{
+            transform: translateY(-60px);
+
+        }
+       
+       
+    }
+    @media (max-width: 812px) {
+        .swiplength>.col{
+         
+             height: 50px;
+             margin-top:20px;
+             margin-bottom: 20px;
+         }
+         
+    }
+    @media (min-width: 812px) and (max-width: 816px) {
+        .swiplength > .col {
+            transform: translateY(-50px);
+        }
+    }
+    @media (min-width: 812px) and (max-width: 950px){
+        .swiplength > .col {
+            transform: translateY(-52px);
+        }
+    }
+    @media (max-width: 378px){
+        .swiplength{
+            transform: translatex(-4px)translateY(4px);
+
+        }
+    }
+    @media (min-width: 950px) and (max-width: 1000px) {
+        .swiplength > .col {
+            transform: translateY(-54px);
+        }
+    }
+    /* >>>>>>>>>>>>>>>>>>>>> */
+    .c1col{
+  opacity: 0;
+  transform: scale(1.2);
+  
+}
+
+
+
+/*  */
+.aboutcol1 {
+    text-align: left;
+}
+
+.aboutcol1 ul {
+    padding-left: 20px;
+}
+
+.aboutcol1 ul li {
+    list-style: none; /* Remove default bullet points */
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+ /* General fade-up animation */
+ .fade-up {
+  opacity: 0;
+  transform: translateY(150px); /* Start position (a bit further down) */
+  transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0); /* Final position */
+}
+
+
+    /* General fade-down animation */
+    .fade-down {
+      opacity: 0;
+      transform: translateY(-60px) scale(0.8); /* Start higher and smaller */
+      transition: opacity 1s ease, transform 0.5s ease;
+    }
+
+    .fade-down.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1); /* Final position and size */
+    }
+
+    .fade-up-slow {
+      opacity: 0;
+      transform: translateY(150px); /* Start position (below) */
+      transition: opacity 1s ease 0.3s, transform 2s ease 0.3s; /* 1 second duration with 0.3s delay */
+    }
+
+    .fade-up-slow.visible {
+      opacity: 1;
+      transform: translateY(0); /* Final position */
+    }
+    /* info */
+   /* info */
+#info > .container {
+    margin-top: 50px;
+}
+
+#info .row {
+    display: flex;
+}
+
+#info .col-lg-6 {
+    padding: 20px;
+}
+
+#info .col-lg-6 img {
+    transition: all 0.3s ease-in-out;
+}
+
+#info .accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Image enlargement when an accordion is opened */
+#info .col-lg-6 img.enlarged {
+    transform: scale(1.2); /* Image enlarges */
+}
+
+/* Change background color of the accordion button when opened */
+/* Change background color and add animation when the accordion button is opened */
+#info .accordion-button {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animate background-color and transform */
+    border-radius: 12px;
+    transition-duration: 1s;
+}
+
+/* Change background color and scale when the accordion button is opened */
+#info .accordion-button:not(.collapsed) {
+    background-color: #f0ad4e; /* Change to any color you prefer */
+    color: white; /* Optional: Change text color */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Accordion collapsed state (default state) */
+#info .accordion-button.collapsed {
+    background-color: #007bff; /* Original default color (blue) */
+    color: white; /* Text color for collapsed state */
+    transform: scale(1); /* Return to normal size */
+}
+
+/* Optionally, you can add a hover effect or active state */
+#info .accordion-button:hover {
+    background-color: #e6952b; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transition-duration: 1s;
+}
+
+
+
+ /* Progress section style */
+ #progressloader{
+    background:skyblue;
+ }
+ .progress-section {
+      margin-top: 100px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 1s ease;
+      width: 90%;
+    }
+
+    /* Individual progress bar container style */
+    .progress-bar-container > .progress-bar {
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 8px;
+      position: relative;
+      width: 0; /* Initially 0% width */
+      transition: width 1s ease;
+    }
+
+    /* Specific styles for each progress bar */
+    .progress-section > .progress-bar-container > .html-progress {
+      background-color: #4CAF50;
+    }
+
+    .progress-section > .progress-bar-container > .css-progress {
+      background-color: #FF9800;
+    }
+
+    .progress-section > .progress-bar-container > .js-progress {
+      background-color: #2196F3;
+    }
+
+    /* Style for text inside progress bars */
+    .progress-bar > .progress-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Animation for progress section */
+    .progress-section.animate {
+      opacity: 1;
+    }
+    #progressimg{
+        height: 90%;
+        width: 90%;
+    }
+
+     /* New Fade-Left Animation */
+     .fade-left {
+        opacity: 0;
+        transform: translateX(-200px); /* Start position (left) */
+        transition: opacity 1s ease, transform 1s ease;
+      }
+  
+      .fade-left.visible {
+        opacity: 1;
+        transform: translateX(0); /* Final position */
+      }
+  
+      /* New Fade-Right Animation */
+      .fade-right {
+        opacity: 0;
+        transform: translateX(200px); /* Start position (right) */
+        transition: opacity 1s ease, transform 1s ease;
+      }
+  
+      .fade-right.visible {
+        opacity: 1;
+        transform: translateX(0); /* Final position */
+      }
+
+      /* >>>>>>>>>> */
+      #fadelr .container {
+      width: 100%;
+      background: #000;
+      display: grid;
+      place-items: center;
+      }
+      
+      #fadelr .container > div:nth-child(1) {
+        
+        background-color: lightblue;
+        padding: 20px;
+        border-radius: 12px;
+      }
+      
+      #fadelr .container > div:nth-child(3) {
+        
+        background-color: yellow;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid yellow;
+
+      }
+      
+
+      /* gsap */
+      #gsap{
+        height: 100vh;
+      }
+      #gsap>.container>.row>.col-lg-3{
+        margin: 1%;
+        height: 400px;
+      }
+    
+      .gsapcontainer>.row>.col-lg-3{
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Slight shadow */
+    max-width: 270px;
+    border: none;
+      }
+      .fade-up-1 {
+        opacity: 0;
+        transform: translateY(50px); /* Start position (below) */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Faster */
+      }
+  
+      .fade-up-1.visible {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+      }
+  
+      /* Fade-up 2 (slower than fade-up 1) */
+      .fade-up-2 {
+        opacity: 0;
+        transform: translateY(50px); /* Start position */
+        transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s; /* Faster with short delay */
+      }
+  
+      .fade-up-2.visible {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+      }
+  
+      /* Fade-up 3 (slower than fade-up 2) */
+      .fade-up-3 {
+        opacity: 0;
+        transform: translateY(50px); /* Start position */
+        transition: opacity 0.3s ease 0.6s, transform 0.3s ease 0.6s; /* Faster with delay after fade-up 2 */
+      }
+  
+      .fade-up-3.visible {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+      }
+   
+
+      #carousel > .owl-carousel > .card {
+        display: inline-block;
+        width: 200px;
+        height: 300px;
+        background-color: #f2f2f2;
+        margin-right: 10px;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+      
+      #carousel > .owl-carousel {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+      }
+      #carousel > .owl-carousel .card{
+        height: 300px;
+        width: 290px;
+      }
+      #carousel > .owl-carousel .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      #carousel > .owl-carousel .card p {
+        font-size: 14px;
+        color: #666;
+      }
+      
+
+
+/* Media query for devices with 
+*/
+@media screen and (max-width: 900px) {
+  .loading-screen{
+    display: none;
+  }
+  .spinner{
+    display: none;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+}

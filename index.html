@@ -1,11 +1,814 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Front End Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
+<style>
+   body{
+    overflow-x: hidden;
+   }
+  
+</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="javascript.js">
 <body>
-    <h1>uhiqhwieyiwyg</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top mynav ">
+        <div class="container-fluid">
+            <!-- Branding on the left -->
+            <a class="navbar-brand" href="#">Shahwaiz</a>
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links on the right -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="homeLink" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="aboutLink" href="#about">Fade up-down</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="infoLink" href="#info">Accordian</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" id="progressLink" href="#fadelr">Fade left-right</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="progressLink" href="#progressloader">loaders</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="progressLink" href="#gsap">GSAP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="progressLink" href="#carousel">Carousel</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+      
+    <!-- Main Content -->
+    <div class="container-fluid c1 fixed-bg-div " id="mainContent" id="home"   >
+      
+        <br><br><br><br>
+        <div class="row">
+            <div class="col-lg-6 c1col">
+                <h1><b>Front End Project</b></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi laboriosam tempora nobis illum fugit.
+                    Omnis eius aut laudantium neque in!</p>
+                <div class="row">
+                    <div class="d-flex justify-content-left">
+                        <button class="btn btn-outline-danger">Outline Danger</button>&nbsp;&nbsp;
+                        <button class="btnc1">Click</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 c1img">
+                <img src="hero-img.png" alt="Hero Image" class="popping">
+            </div>
+        </div>
+    </div>
+ 
+    <div id="about">
+        <center>
+        <div class="swiper-container fade-down">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="container mt-5">
+                        <div class="row swiplength">
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="container mt-5">
+                        <div class="row swiplength">
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="container mt-5">
+                        <div class="row swiplength">
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="container mt-5">
+                        <div class="row swiplength">
+                          
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                            <div class="col">
+                                <div class="">Hello World</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+        </div>
+        
+    </center>
+   <BR></BR>
+           <center class="fade-up">
+            <h2>Fade up-down</h2>
+           </center>
+  <BR></BR>
+          <div class="container">
+<div class="row">
+    <div class="col-lg-6 aboutcol1 fade-up">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam praesentium culpa quo inventore iusto officia, alias cumque quam doloremque fugit perferendis reiciendis fuga aliquid obcaecati deleniti tempora. Esse asperiores, iure necessitatibus odit possimus laborum officiis sed. Ducimus neque nesciunt omnis.</p>
+        <ul>
+            <li><i class="fas fa-check-circle" style="color: rgb(142, 142, 239);"></i> lorem</li>
+            <li><i class="fas fa-check-circle" style="color: rgb(142, 142, 239);"></i> ipsum</li>
+            <li><i class="fas fa-check-circle" style="color: rgb(142, 142, 239);"></i> working fine</li>
+        </ul>
+    </div>
+    <div class="col-lg-6 fade-up-slow">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum libero ipsa minus laboriosam consequatur dolor eligendi exercitationem quibusdam, iste, delectus magni voluptates voluptatibus optio eius ipsam quia recusandae facilis culpa.</p>
+        <div class="row">
+            <div class="d-flex justify-content-left">
+                <button class="btn btn-outline-danger">Outline Danger</button>&nbsp;&nbsp;
+                <button class="btnc1 text-white" >Click</button>
+            </div>
+        </div>
+    </div>
+</div>
+          </div>
+
+
+    </div>
+
+   
+    <div  id="info">
+        <BR></BR>
+        <center class="fade-down"><h2>Picture Accordian</h2></center>
+        <br>
+        <div class="container">
+            <div class="row">
+                <!-- Left Column: Text and Accordions -->
+                <div class="col-lg-6 fade-up">
+                    <p>This is some introductory text on the left side of the page.</p>
+    
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Accordion 1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Content for Accordion 1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion 2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Content for Accordion 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Accordion 3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Content for Accordion 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Column: Image -->
+                <div class="col-lg-6 fade-up-slow">
+                    <img id="infoImage" src="hero-img.png" alt="Info Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="progressloader">
+        <br>
+        <center class="fade-down"><h1>Percentage Animation</h1></center>
+      <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 fade-up">
+               <img src="hero-img.png" alt="" height="500" width="auto" id="progressimg">
+                </div>
+                <div class="col-lg-6">
+                     <!-- Progress Loader Section -->
+  <div class="progress-section" id="progressSection">
+    <div class="progress-bar-container">
+      <div class="progress-bar html-progress">
+        <span class="progress-text" id="htmlText">HTML 0%</span>
+      </div>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar css-progress">
+        <span class="progress-text" id="cssText">CSS 0%</span>
+      </div>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar js-progress">
+        <span class="progress-text" id="jsText">JS 0%</span>
+      </div>
+    </div>
+  </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+    
+    <div id="fadelr">
+        <BR></BR>
+        <center class="fade-down"><h2>Fade left-right</h2></center>
+      <div class="container" style="height:60vh;width: 100%;">
+        <div class="fade-left">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aliquam saepe facere ad voluptatibus amet consequuntur sit quasi dignissimos doloremque.
+          </div>
+          <br>
+          <div class="fade-right">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sunt error eos. Optio ipsum voluptatum at corrupti provident reiciendis pariatur numquam minus tempora itaque qui voluptatibus, amet impedit deleniti ad.
+          </div>
+      </div>
+    </div>
+
+
+     <div id="gsap" >
+      <br>
+      <center><h2>Gsap timeline</h2></center>
+      <br>
+      <div class="container gsapcontainer ">
+        <div class="row justify-content-center">
+          <!-- First Fade-Up 1 Example -->
+          <div class="col-lg-3 fade-up-1">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dignissimos impedit incidunt esse vitae quidem officiis veniam assumenda exercitationem explicabo?</p>
+          </div>
+         
+          <!-- Second Fade-Up 2 Example (slower) -->
+          <div class="col-lg-3 fade-up-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ea excepturi ipsa explicabo sint repellat nobis sed quod cum ut.</p>
+          </div>
+    
+          <!-- Third Fade-Up 3 Example (slower than Fade-Up 2) -->
+         
+
+          <div class="col-lg-3 fade-up-3 ">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eveniet laudantium, et obcaecati nisi saepe ipsa sint nihil excepturi nulla!</p>
+          </div>
+        </div>
+      </div>
+    
+      
+     </div>
+
+     <div id="carousel" >
+      <br>
+      <center><h2>Carousel</h2></center>
+      <br>
+      <div class="owl-carousel" >
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Content for card 1</p>
+        </div>
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Content for card 2</p>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Content for card 3</p>
+        </div>
+        <div class="card">
+          <h3>Card 4</h3>
+          <p>Content for card 4</p>
+        </div>
+        <div class="card">
+          <h3>Card 5</h3>
+          <p>Content for card 5</p>
+        </div>
+        <div class="card">
+          <h3>Card 6</h3>
+          <p>Content for card 6</p>
+        </div>
+        <div class="card">
+          <h3>Card 7</h3>
+          <p>Content for card 7</p>
+        </div>
+        <div class="card">
+          <h3>Card 8</h3>
+          <p>Content for card 8</p>
+        </div>
+      </div>
+    </div>
+    
+
+  
+   
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#carousel .owl-carousel').owlCarousel({
+      items: 4,  // Number of items to show at once
+      loop: true,  // Loop the items
+      margin: 10,  // Margin between items
+      autoplay: true,  // Enable autoplay
+      autoplayTimeout: 2000,  // Time between each auto move
+      autoplayHoverPause: true,  // Pause autoplay when mouse hovers
+      responsive: {
+        0: {
+          items: 1,  // Show 1 item on small screens
+        },
+        600: {
+          items: 2,  // Show 2 items on medium screens
+        },
+        1000: {
+          items: 4  // Show 4 items on larger screens
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+   <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+<script>
+  // Function to handle visibility of elements with fade-up-1, fade-up-2, and fade-up-3
+  window.addEventListener('scroll', function() {
+    // Handle fade-up-1 elements
+    const fadeUp1Elements = document.querySelectorAll('.fade-up-1');
+    fadeUp1Elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
+
+    // Handle fade-up-2 elements (slower)
+    const fadeUp2Elements = document.querySelectorAll('.fade-up-2');
+    fadeUp2Elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
+
+    // Handle fade-up-3 elements (slower than fade-up-2)
+    const fadeUp3Elements = document.querySelectorAll('.fade-up-3');
+    fadeUp3Elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
+  });
+</script>
+
+
+  <script>
+
+    // Function to handle visibility of fade-left and fade-right elements
+    window.addEventListener('scroll', function() {
+      handleFadeLeftRightAnimations();
+    });
+
+    function handleFadeLeftRightAnimations() {
+      // Handle fade-left elements
+      const fadeLeftElements = document.querySelectorAll('.fade-left');
+      fadeLeftElements.forEach(function(element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+      });
+
+      // Handle fade-right elements
+      const fadeRightElements = document.querySelectorAll('.fade-right');
+      fadeRightElements.forEach(function(element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+      });
+    }
+  </script>
+
+
+<script>
+    // Function to handle visibility of elements with fade-up and fade-down
+    window.addEventListener('scroll', function() {
+      // Handle fade-up elements
+      const fadeUpElements = document.querySelectorAll('.fade-up');
+      fadeUpElements.forEach(function(element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+      });
+
+      // Handle fade-down elements
+      const fadeDownElements = document.querySelectorAll('.fade-down');
+      fadeDownElements.forEach(function(element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+      });
+    });
+
+
+        // Function to handle visibility of elements with fade-up-slow effect
+window.addEventListener('scroll', function() {
+  // Handle fade-up-slow elements
+  const fadeUpSlowElements = document.querySelectorAll('.fade-up-slow');
+  fadeUpSlowElements.forEach(function(element) {
+    const rect = element.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      element.classList.add('visible'); // Trigger the fade-up-slow animation
+    } else {
+      element.classList.remove('visible'); // Remove animation when out of view
+    }
+  });
+});
+
+
+  </script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView:3,         // Adjust as needed
+          spaceBetween: 10,         // Adjust as needed
+          autoplay: {
+            delay: 2500,            // Delay between slide changes (in ms)
+            disableOnInteraction: false,  // Continue autoplay even after user interaction
+          },
+          loop: true,               // Loop through slides
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        });
+      </script>
+      
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+   
+    <script>
+        // Select all accordion collapse elements and the image
+        const collapseElements = document.querySelectorAll('.accordion-collapse');
+        const image = document.getElementById('infoImage');
+
+        // Function to check if any accordion is open
+        function checkAccordionState() {
+            let anyOpen = false;
+            collapseElements.forEach((collapseElement) => {
+                if (collapseElement.classList.contains('show')) {
+                    anyOpen = true;
+                }
+            });
+
+            // Enlarge image if any accordion is open, otherwise shrink
+            if (anyOpen) {
+                image.classList.add('enlarged');
+            } else {
+                image.classList.remove('enlarged');
+            }
+        }
+
+        collapseElements.forEach((collapseElement) => {
+            // Listen for when the accordion is shown (opened)
+            collapseElement.addEventListener('shown.bs.collapse', function() {
+                checkAccordionState();
+            });
+
+            // Listen for when the accordion is hidden (closed)
+            collapseElement.addEventListener('hidden.bs.collapse', function() {
+                checkAccordionState();
+            });
+        });
+
+        // Initialize accordion state on page load
+        checkAccordionState();
+    </script>
+  <!-- html css js loaders -->
+
+  <script>
+    // Select the progress section and elements
+    const progressSection = document.getElementById('progressSection');
+    const htmlProgressBar = document.querySelector('.html-progress');
+    const cssProgressBar = document.querySelector('.css-progress');
+    const jsProgressBar = document.querySelector('.js-progress');
+    const htmlText = document.getElementById('htmlText');
+    const cssText = document.getElementById('cssText');
+    const jsText = document.getElementById('jsText');
+
+    // Set up progress values
+    const htmlProgress = 40;
+    const cssProgress = 57;
+    const jsProgress = 90;
+
+    // Function to animate progress bars
+    function animateProgress() {
+      let html = 0;
+      let css = 0;
+      let js = 0;
+
+      // HTML progress bar animation
+      const htmlInterval = setInterval(() => {
+        if (html < htmlProgress) {
+          html += 2;
+          htmlProgressBar.style.width = html + '%';
+          htmlText.innerText = 'HTML ' + html + '%';
+        } else {
+          clearInterval(htmlInterval);
+        }
+      }, 20);
+
+      // CSS progress bar animation
+      const cssInterval = setInterval(() => {
+        if (css < cssProgress) {
+          css += 2;
+          cssProgressBar.style.width = css + '%';
+          cssText.innerText = 'CSS ' + css + '%';
+        } else {
+          clearInterval(cssInterval);
+        }
+      }, 20);
+
+      // JS progress bar animation
+      const jsInterval = setInterval(() => {
+        if (js < jsProgress) {
+          js += 2;
+          jsProgressBar.style.width = js + '%';
+          jsText.innerText = 'JS ' + js + '%';
+        } else {
+          clearInterval(jsInterval);
+        }
+      }, 20);
+    }
+
+    // Function to reset progress bars
+    function resetProgress() {
+      htmlProgressBar.style.width = '0%';
+      cssProgressBar.style.width = '0%';
+      jsProgressBar.style.width = '0%';
+      htmlText.innerText = 'HTML 0%';
+      cssText.innerText = 'CSS 0%';
+      jsText.innerText = 'JS 0%';
+    }
+
+    // IntersectionObserver to detect when the progress section comes into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start animation when section is in view
+          progressSection.classList.add('animate');
+          animateProgress();
+        } else {
+          // Reset progress when the section is not in view
+          progressSection.classList.remove('animate');
+          resetProgress();
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+    // Start observing the progress section
+    observer.observe(progressSection);
+  </script>
+
+
+ 
+<script>
+    // JavaScript to handle active link state and smooth scrolling
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+   link.addEventListener('click', function (e) {
+       // Prevent default link click behavior
+       e.preventDefault();
+
+       // Get the target section
+       const targetSection = document.querySelector(this.getAttribute('href'));
+
+       // Scroll to the target section with smooth scrolling
+       window.scrollTo({
+           top: targetSection.offsetTop,
+           behavior: 'smooth'
+       });
+
+       // Remove active class from all links
+       navLinks.forEach(link => link.classList.remove('active'));
+
+       // Add active class to the clicked link
+       this.classList.add('active');
+   });
+});
+
+// Special case for the "Home" link to ensure smooth scrolling to the top
+document.getElementById('homeLink').addEventListener('click', function (e) {
+   e.preventDefault();
+   
+   window.scrollTo({
+       top: 0,
+       behavior: 'smooth'
+   });
+   
+   // Remove active class from all links and add it to the "Home" link
+   navLinks.forEach(link => link.classList.remove('active'));
+   this.classList.add('active');
+
+
+   
+
+});
+       
+</script>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<!-- GSAP -->
+<script>
+  // GSAP ScrollTrigger for dynamic effects on scroll
+  gsap.registerPlugin(ScrollTrigger);
+
+// When the user starts scrolling, change the background color of the nav
+gsap.to(".navbar", {
+    scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+    },
+    backgroundColor: "rgba(0, 0, 0, 0.1)"
+});
+
+// Wait for 1 second before removing the loading screen and showing the content
+setTimeout(function () {
+    // Fade out the loading screen
+    gsap.to("#loadingScreen", {
+        opacity: 0, duration: 0.2, onComplete: function () {
+            document.getElementById("loadingScreen").style.display = 'none';
+        }
+    });
+    
+
+    // Show the main content with a fade-in effect
+    gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
+}, 1000);
+
+// mobile no loading
+// Check if the window width is greater than or equal to 900px
+if (window.innerWidth >= 900) {
+    // Wait for 1 second before removing the loading screen and showing the content
+    setTimeout(function () {
+        // Fade out the loading screen
+        gsap.to("#loadingScreen", {
+            opacity: 0, duration: 0.2, onComplete: function () {
+                document.getElementById("loadingScreen").style.display = 'none';
+            }
+        });
+
+        // Show the main content with a fade-in effect
+        gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
+    }, 1000);
+} else {
+    // If the window width is less than 900px, immediately hide the loading screen and show the content
+    document.getElementById("loadingScreen").style.display = 'none';
+    gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.to('.popping', {
+    y: -15, // Move up by 10px (you can adjust this value)
+    duration:.8, // Duration of the upward movement
+    ease: "power1.inOut", // Smooth ease-in-out transition
+    repeat: -1, // Repeat the animation infinitely
+    yoyo: true, // Makes the animation reverse (goes back down after moving up)
+  });
+});
+
+</script>
+<script>
+    gsap.to(".c1col", {
+        delay:1.5,
+  duration: 1, // Duration of the animation in seconds
+  scale: 1, // Ending scale
+  opacity: 1, // Make it visible
+  scaleX: 1, // Ensure horizontal scaling is also adjusted
+  scaleY: 1, // Ensure vertical scaling is also adjusted
+  opacity: 1, // Start from invisible (opacity: 0) to visible (opacity: 1)
+  scaleOrigin: "center", // Scaling should be from the center of the element
+  ease: "power1.out" // Ease function for smooth transition
+});
+
+</script>
+ 
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
 </body>
+
 </html>
