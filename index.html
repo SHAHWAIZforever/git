@@ -57,6 +57,9 @@
                   <li class="nav-item">
                     <a class="nav-link" id="progressLink" href="#carousel">Carousel</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="progressLink" href="#form">Form Validation</a>
+              </li>
                 </ul>
             </div>
         </div>
@@ -65,101 +68,49 @@
     
 
 
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="spinner"></div>
-    </div>
+   
       
     <!-- Main Content -->
     <div class="container-fluid c1 fixed-bg-div " id="mainContent" id="home"   >
       
-        <br><br><br><br>
+        <BR><br></BR>
         <div class="row">
             <div class="col-lg-6 c1col">
+              <BR><BR></BR></BR>
                 <h1><b>Front End Project</b></h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi laboriosam tempora nobis illum fugit.
                     Omnis eius aut laudantium neque in!</p>
+                    <div class="row">
+                              <h2 id='typingEffect' style="height: 80px;"></h2>  
+                              <br>
+                    </div>
                 <div class="row">
                     <div class="d-flex justify-content-left">
                         <button class="btn btn-outline-danger">Outline Danger</button>&nbsp;&nbsp;
                         <button class="btnc1">Click</button>
                     </div>
                 </div>
+               
             </div>
 
             <div class="col-lg-6 c1img">
-                <img src="hero-img.png" alt="Hero Image" class="popping">
+                <img  src="nobg.jpg"  class="popping" >
             </div>
+           
         </div>
+        
     </div>
  
     <div id="about">
-        <center>
-        <div class="swiper-container fade-down">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="container mt-5">
-                        <div class="row swiplength">
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="container mt-5">
-                        <div class="row swiplength">
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="container mt-5">
-                        <div class="row swiplength">
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="container mt-5">
-                        <div class="row swiplength">
-                          
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                            <div class="col">
-                                <div class="">Hello World</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more slides as needed -->
-            </div>
+        <center  id="smallslide" class="fade-down">
+          <div class="owl-carousel owl-theme">
+            <div class="item">Card 1</div>
+            <div class="item">Card 2</div>
+            <div class="item">Card 3</div>
+            <div class="item">Card 4</div>
+            <div class="item">Card 5</div>
         </div>
-        
+         
     </center>
    <BR></BR>
            <center class="fade-up">
@@ -192,15 +143,15 @@
     </div>
 
    
-    <div  id="info">
+    <div  id="info" class="fixed-bg-2">
         <BR></BR>
-        <center class="fade-down"><h2>Picture Accordian</h2></center>
+        <center class="fade-down "><h2><b>Picture Accordian</b></h2></center>
         <br>
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <!-- Left Column: Text and Accordions -->
                 <div class="col-lg-6 fade-up">
-                    <p>This is some introductory text on the left side of the page.</p>
+                    <p>Picture interacts with accordians</p>
     
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
@@ -210,7 +161,7 @@
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
+                                <div class="accordion-body" >
                                     Content for Accordion 1
                                 </div>
                             </div>
@@ -243,21 +194,22 @@
                 </div>
     
                 <!-- Right Column: Image -->
-                <div class="col-lg-6 fade-up-slow">
-                    <img id="infoImage" src="hero-img.png" alt="Info Image" class="img-fluid">
+                <div class="col-lg-6 fade-up-slow" style="display: grid;place-items: center;">
+                    <img id="infoImage" src="hero-img.png" alt="Info Image" >
                 </div>
             </div>
-        </div>
+            <BR><br></BR>
+        </div>        
     </div>
 
-    <section id="progressloader">
+    <section id="progressloader" >
         <br>
         <center class="fade-down"><h1>Percentage Animation</h1></center>
       <br>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 fade-up">
-               <img src="hero-img.png" alt="" height="500" width="auto" id="progressimg">
+               <img src="hero-img.png" alt="" height="500" width="auto" id="progressimg" class="popping">
                 </div>
                 <div class="col-lg-6">
                      <!-- Progress Loader Section -->
@@ -285,14 +237,14 @@
         <br>
     </section>
     
-    <div id="fadelr">
+    <div id="fadelr" class="fixed-bg-3">
         <BR></BR>
         <center class="fade-down"><h2>Fade left-right</h2></center>
-      <div class="container" style="height:60vh;width: 100%;">
+      <div class="container-fluid" style="height:60vh;width: 100%;">
         <div class="fade-left">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aliquam saepe facere ad voluptatibus amet consequuntur sit quasi dignissimos doloremque.
           </div>
-          <br>
+           <br>
           <div class="fade-right">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sunt error eos. Optio ipsum voluptatum at corrupti provident reiciendis pariatur numquam minus tempora itaque qui voluptatibus, amet impedit deleniti ad.
           </div>
@@ -307,68 +259,200 @@
       <div class="container gsapcontainer ">
         <div class="row justify-content-center">
           <!-- First Fade-Up 1 Example -->
-          <div class="col-lg-3 fade-up-1">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dignissimos impedit incidunt esse vitae quidem officiis veniam assumenda exercitationem explicabo?</p>
+          <div class="col-lg-3 fade-up-1 ">
+            <div class="user-info">
+              <img src="user.jpg" alt="User Avatar" class="user-avatar">
+              <div class="user-details">
+                <h2>Shahwaiz</h2>
+                <p>Web Developer</p>
+                <br>
+                <ul class="skill-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>Bootstrap</li>
+                  <li>MySQL</li>
+                  <li>Gsap</li>
+                </ul>
+              </div>
+            </div>
           </div>
          
           <!-- Second Fade-Up 2 Example (slower) -->
           <div class="col-lg-3 fade-up-2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ea excepturi ipsa explicabo sint repellat nobis sed quod cum ut.</p>
+            <div class="user-info">
+              <img src="user.jpg" alt="User Avatar" class="user-avatar">
+              <div class="user-details">
+                <h2>Shahwaiz</h2>
+                <p>Web Developer</p>
+                <br>
+                <ul class="skill-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>Bootstrap</li>
+                  <li>MySQL</li>
+                  <li>Gsap</li>
+                </ul>
+              </div>
+            </div>
           </div>
     
           <!-- Third Fade-Up 3 Example (slower than Fade-Up 2) -->
          
 
-          <div class="col-lg-3 fade-up-3 ">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eveniet laudantium, et obcaecati nisi saepe ipsa sint nihil excepturi nulla!</p>
+    
+        <div class="col-lg-3 fade-up-3">
+            <div class="user-info">
+              <img src="user.jpg" alt="User Avatar" class="user-avatar">
+              <div class="user-details">
+                <h2>Shahwaiz</h2>
+                <p>Web Developer</p>
+                <br>
+                <ul class="skill-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>Bootstrap</li>
+                  <li>MySQL</li>
+                  <li>Gsap</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
+    </div>
       
-     </div>
-
-     <div id="carousel" >
+    <section id="carousel" class="fade-up-slow">
       <br>
-      <center><h2>Carousel</h2></center>
+      <center><h2>Tech Stack Carousel</h2></center>
       <br>
-      <div class="owl-carousel" >
+      <div class="owl-carousel">
+        <!-- Card for HTML -->
         <div class="card">
-          <h3>Card 1</h3>
-          <p>Content for card 1</p>
+          <h3>HTML</h3>
+          <p>HyperText Markup Language is the standard language for creating web pages.</p>
         </div>
+        <!-- Card for CSS -->
         <div class="card">
-          <h3>Card 2</h3>
-          <p>Content for card 2</p>
+          <h3>CSS</h3>
+          <p>Cascading Style Sheets is used to style and layout web pages.</p>
         </div>
+        <!-- Card for JavaScript -->
         <div class="card">
-          <h3>Card 3</h3>
-          <p>Content for card 3</p>
+          <h3>JavaScript</h3>
+          <p>JavaScript is a programming language used to make web pages interactive.</p>
         </div>
+        <!-- Card for MySQL -->
         <div class="card">
-          <h3>Card 4</h3>
-          <p>Content for card 4</p>
+          <h3>MySQL</h3>
+          <p>MySQL is an open-source relational database management system.</p>
         </div>
+        <!-- Card for PHP -->
         <div class="card">
-          <h3>Card 5</h3>
-          <p>Content for card 5</p>
+          <h3>PHP</h3>
+          <p>PHP is a server-side scripting language for web development.</p>
         </div>
+        <!-- Card for GSAP -->
         <div class="card">
-          <h3>Card 6</h3>
-          <p>Content for card 6</p>
-        </div>
-        <div class="card">
-          <h3>Card 7</h3>
-          <p>Content for card 7</p>
-        </div>
-        <div class="card">
-          <h3>Card 8</h3>
-          <p>Content for card 8</p>
+          <h3>GSAP</h3>
+          <p>GSAP (GreenSock Animation Platform) is used for creating high-performance animations.</p>
         </div>
       </div>
-    </div>
-    
+      <br>        
 
+    </section>
+  
+    <div id="form" class="fade-up-slow" >
+      <BR></BR>
+      <div class="container">
+        <h2 class="text-center">Person Information Form</h2>
+        <form id="personForm" class="needs-validation" novalidate>
+            <!-- Name -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <div class="invalid-feedback">
+                    Please provide a name.
+                </div>
+            </div>
+    
+            <!-- Profile Picture -->
+            <div class="mb-3">
+                <label for="pic" class="form-label">Profile Picture</label>
+                <input type="file" class="form-control" id="pic" accept="image/*" required>
+                <div class="invalid-feedback">
+                    Please upload a profile picture.
+                </div>
+            </div>
+    
+            <!-- Age -->
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter your age" required min="1" max="150">
+                <div class="invalid-feedback">
+                    Please provide a valid age.
+                </div>
+            </div>
+    
+            <!-- Education -->
+            <div class="mb-3">
+                <label for="education" class="form-label">Education</label>
+                <select class="form-select" id="education" required>
+                    <option value="">Select your education</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">Ph.D.</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select your education.
+                </div>
+            </div>
+    
+            <!-- Contact -->
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" >
+                <div class="invalid-feedback">
+                    Please provide a valid contact number (10 digits).
+                </div>
+            </div>
+    
+            <!-- Gender -->
+            <div class="mb-3">
+                <label class="form-label">Gender</label><br>
+                <input type="radio" id="genderMale" name="gender" value="Male" required> <label for="genderMale">Male</label><br>
+                <input type="radio" id="genderFemale" name="gender" value="Female" required> <label for="genderFemale">Female</label><br>
+                <div class="invalid-feedback">
+                    Please select a gender.
+                </div>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    
+        <hr>
+    
+        <h3 class="text-center">Submitted Information</h3>
+        <div id="displayInfo" class="mt-4"></div>
+
+        <BR></BR>
+    </div>
+    <br>
+    </div>
+
+            
+                
+    
+    
+    
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
   
    
 <!-- Include jQuery -->
@@ -378,435 +462,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<script>
-  $(document).ready(function() {
-    $('#carousel .owl-carousel').owlCarousel({
-      items: 4,  // Number of items to show at once
-      loop: true,  // Loop the items
-      margin: 10,  // Margin between items
-      autoplay: true,  // Enable autoplay
-      autoplayTimeout: 2000,  // Time between each auto move
-      autoplayHoverPause: true,  // Pause autoplay when mouse hovers
-      responsive: {
-        0: {
-          items: 1,  // Show 1 item on small screens
-        },
-        600: {
-          items: 2,  // Show 2 items on medium screens
-        },
-        1000: {
-          items: 4  // Show 4 items on larger screens
-        }
-      }
-    });
-  });
-</script>
-
-
-  
    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- Swiper JS -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-
-
-<script>
-  // Function to handle visibility of elements with fade-up-1, fade-up-2, and fade-up-3
-  window.addEventListener('scroll', function() {
-    // Handle fade-up-1 elements
-    const fadeUp1Elements = document.querySelectorAll('.fade-up-1');
-    fadeUp1Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-
-    // Handle fade-up-2 elements (slower)
-    const fadeUp2Elements = document.querySelectorAll('.fade-up-2');
-    fadeUp2Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-
-    // Handle fade-up-3 elements (slower than fade-up-2)
-    const fadeUp3Elements = document.querySelectorAll('.fade-up-3');
-    fadeUp3Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-  });
-</script>
-
-
-  <script>
-
-    // Function to handle visibility of fade-left and fade-right elements
-    window.addEventListener('scroll', function() {
-      handleFadeLeftRightAnimations();
-    });
-
-    function handleFadeLeftRightAnimations() {
-      // Handle fade-left elements
-      const fadeLeftElements = document.querySelectorAll('.fade-left');
-      fadeLeftElements.forEach(function(element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          element.classList.add('visible');
-        } else {
-          element.classList.remove('visible');
-        }
-      });
-
-      // Handle fade-right elements
-      const fadeRightElements = document.querySelectorAll('.fade-right');
-      fadeRightElements.forEach(function(element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          element.classList.add('visible');
-        } else {
-          element.classList.remove('visible');
-        }
-      });
-    }
-  </script>
-
-
-<script>
-    // Function to handle visibility of elements with fade-up and fade-down
-    window.addEventListener('scroll', function() {
-      // Handle fade-up elements
-      const fadeUpElements = document.querySelectorAll('.fade-up');
-      fadeUpElements.forEach(function(element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          element.classList.add('visible');
-        } else {
-          element.classList.remove('visible');
-        }
-      });
-
-      // Handle fade-down elements
-      const fadeDownElements = document.querySelectorAll('.fade-down');
-      fadeDownElements.forEach(function(element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          element.classList.add('visible');
-        } else {
-          element.classList.remove('visible');
-        }
-      });
-    });
-
-
-        // Function to handle visibility of elements with fade-up-slow effect
-window.addEventListener('scroll', function() {
-  // Handle fade-up-slow elements
-  const fadeUpSlowElements = document.querySelectorAll('.fade-up-slow');
-  fadeUpSlowElements.forEach(function(element) {
-    const rect = element.getBoundingClientRect();
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      element.classList.add('visible'); // Trigger the fade-up-slow animation
-    } else {
-      element.classList.remove('visible'); // Remove animation when out of view
-    }
-  });
-});
-
-
-  </script>
-
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView:3,         // Adjust as needed
-          spaceBetween: 10,         // Adjust as needed
-          autoplay: {
-            delay: 2500,            // Delay between slide changes (in ms)
-            disableOnInteraction: false,  // Continue autoplay even after user interaction
-          },
-          loop: true,               // Loop through slides
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          }
-        });
-      </script>
-      
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
-
-   
-    <script>
-        // Select all accordion collapse elements and the image
-        const collapseElements = document.querySelectorAll('.accordion-collapse');
-        const image = document.getElementById('infoImage');
-
-        // Function to check if any accordion is open
-        function checkAccordionState() {
-            let anyOpen = false;
-            collapseElements.forEach((collapseElement) => {
-                if (collapseElement.classList.contains('show')) {
-                    anyOpen = true;
-                }
-            });
-
-            // Enlarge image if any accordion is open, otherwise shrink
-            if (anyOpen) {
-                image.classList.add('enlarged');
-            } else {
-                image.classList.remove('enlarged');
-            }
-        }
-
-        collapseElements.forEach((collapseElement) => {
-            // Listen for when the accordion is shown (opened)
-            collapseElement.addEventListener('shown.bs.collapse', function() {
-                checkAccordionState();
-            });
-
-            // Listen for when the accordion is hidden (closed)
-            collapseElement.addEventListener('hidden.bs.collapse', function() {
-                checkAccordionState();
-            });
-        });
-
-        // Initialize accordion state on page load
-        checkAccordionState();
-    </script>
-  <!-- html css js loaders -->
-
-  <script>
-    // Select the progress section and elements
-    const progressSection = document.getElementById('progressSection');
-    const htmlProgressBar = document.querySelector('.html-progress');
-    const cssProgressBar = document.querySelector('.css-progress');
-    const jsProgressBar = document.querySelector('.js-progress');
-    const htmlText = document.getElementById('htmlText');
-    const cssText = document.getElementById('cssText');
-    const jsText = document.getElementById('jsText');
-
-    // Set up progress values
-    const htmlProgress = 40;
-    const cssProgress = 57;
-    const jsProgress = 90;
-
-    // Function to animate progress bars
-    function animateProgress() {
-      let html = 0;
-      let css = 0;
-      let js = 0;
-
-      // HTML progress bar animation
-      const htmlInterval = setInterval(() => {
-        if (html < htmlProgress) {
-          html += 2;
-          htmlProgressBar.style.width = html + '%';
-          htmlText.innerText = 'HTML ' + html + '%';
-        } else {
-          clearInterval(htmlInterval);
-        }
-      }, 20);
-
-      // CSS progress bar animation
-      const cssInterval = setInterval(() => {
-        if (css < cssProgress) {
-          css += 2;
-          cssProgressBar.style.width = css + '%';
-          cssText.innerText = 'CSS ' + css + '%';
-        } else {
-          clearInterval(cssInterval);
-        }
-      }, 20);
-
-      // JS progress bar animation
-      const jsInterval = setInterval(() => {
-        if (js < jsProgress) {
-          js += 2;
-          jsProgressBar.style.width = js + '%';
-          jsText.innerText = 'JS ' + js + '%';
-        } else {
-          clearInterval(jsInterval);
-        }
-      }, 20);
-    }
-
-    // Function to reset progress bars
-    function resetProgress() {
-      htmlProgressBar.style.width = '0%';
-      cssProgressBar.style.width = '0%';
-      jsProgressBar.style.width = '0%';
-      htmlText.innerText = 'HTML 0%';
-      cssText.innerText = 'CSS 0%';
-      jsText.innerText = 'JS 0%';
-    }
-
-    // IntersectionObserver to detect when the progress section comes into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Start animation when section is in view
-          progressSection.classList.add('animate');
-          animateProgress();
-        } else {
-          // Reset progress when the section is not in view
-          progressSection.classList.remove('animate');
-          resetProgress();
-        }
-      });
-    }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
-
-    // Start observing the progress section
-    observer.observe(progressSection);
-  </script>
-
-
- 
-<script>
-    // JavaScript to handle active link state and smooth scrolling
-const navLinks = document.querySelectorAll('.nav-link');
-
-navLinks.forEach(link => {
-   link.addEventListener('click', function (e) {
-       // Prevent default link click behavior
-       e.preventDefault();
-
-       // Get the target section
-       const targetSection = document.querySelector(this.getAttribute('href'));
-
-       // Scroll to the target section with smooth scrolling
-       window.scrollTo({
-           top: targetSection.offsetTop,
-           behavior: 'smooth'
-       });
-
-       // Remove active class from all links
-       navLinks.forEach(link => link.classList.remove('active'));
-
-       // Add active class to the clicked link
-       this.classList.add('active');
-   });
-});
-
-// Special case for the "Home" link to ensure smooth scrolling to the top
-document.getElementById('homeLink').addEventListener('click', function (e) {
-   e.preventDefault();
-   
-   window.scrollTo({
-       top: 0,
-       behavior: 'smooth'
-   });
-   
-   // Remove active class from all links and add it to the "Home" link
-   navLinks.forEach(link => link.classList.remove('active'));
-   this.classList.add('active');
-
-
-   
-
-});
-       
-</script>
-
-<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-<!-- GSAP -->
-<script>
-  // GSAP ScrollTrigger for dynamic effects on scroll
-  gsap.registerPlugin(ScrollTrigger);
-
-// When the user starts scrolling, change the background color of the nav
-gsap.to(".navbar", {
-    scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-    },
-    backgroundColor: "rgba(0, 0, 0, 0.1)"
-});
-
-// Wait for 1 second before removing the loading screen and showing the content
-setTimeout(function () {
-    // Fade out the loading screen
-    gsap.to("#loadingScreen", {
-        opacity: 0, duration: 0.2, onComplete: function () {
-            document.getElementById("loadingScreen").style.display = 'none';
-        }
-    });
-    
-
-    // Show the main content with a fade-in effect
-    gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
-}, 1000);
-
-// mobile no loading
-// Check if the window width is greater than or equal to 900px
-if (window.innerWidth >= 900) {
-    // Wait for 1 second before removing the loading screen and showing the content
-    setTimeout(function () {
-        // Fade out the loading screen
-        gsap.to("#loadingScreen", {
-            opacity: 0, duration: 0.2, onComplete: function () {
-                document.getElementById("loadingScreen").style.display = 'none';
-            }
-        });
-
-        // Show the main content with a fade-in effect
-        gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
-    }, 1000);
-} else {
-    // If the window width is less than 900px, immediately hide the loading screen and show the content
-    document.getElementById("loadingScreen").style.display = 'none';
-    gsap.to("#mainContent", { display: 'block', opacity: 1, duration: 0.2 });
-}
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.to('.popping', {
-    y: -15, // Move up by 10px (you can adjust this value)
-    duration:.8, // Duration of the upward movement
-    ease: "power1.inOut", // Smooth ease-in-out transition
-    repeat: -1, // Repeat the animation infinitely
-    yoyo: true, // Makes the animation reverse (goes back down after moving up)
-  });
-});
-
-</script>
-<script>
-    gsap.to(".c1col", {
-        delay:1.5,
-  duration: 1, // Duration of the animation in seconds
-  scale: 1, // Ending scale
-  opacity: 1, // Make it visible
-  scaleX: 1, // Ensure horizontal scaling is also adjusted
-  scaleY: 1, // Ensure vertical scaling is also adjusted
-  opacity: 1, // Start from invisible (opacity: 0) to visible (opacity: 1)
-  scaleOrigin: "center", // Scaling should be from the center of the element
-  ease: "power1.out" // Ease function for smooth transition
-});
-
-</script>
- 
-
-
-
-
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+<!-- Gsap  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+<script src="script.js"></script>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+
+
+
 
 
 </body>

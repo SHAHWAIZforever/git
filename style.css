@@ -24,41 +24,69 @@ body {
    
 }
 .mynav>.container-fluid{
-padding-left: 10%;
-padding-right: 10%;
-}
-.nav-link {
-    color: white !important;  /* Force all links to be white */
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
+  padding-left: 5%;
+  padding-right: 5%;
+  }
+  .nav-link {
+      color: white !important;  /* Force all links to be white */
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 5px;
+      transition: color 0.3s ease;
+      
+      
+  }
+  
+  .nav-link:hover {
+      color: white !important; /* Ensure color is white on hover */
+    
+     
+  }
+  .nav-link:hover {
     color: white !important; /* Ensure color is white on hover */
-}
-
-.nav-link.active {
-    color: white !important; /* Active link remains white */
-    text-decoration: none;
-}
-
-/* Underline animation */
-.nav-link::after {
-    content: '';
+  }
+  
+  .nav-link::after {
+    content: ""; /* Creates the pseudo-element */
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.5s ease;
-}
-
-.nav-link.active::after {
-    width: 100%; /* Active link shows the full underline */
-}
+    height: 2px; /* Height of the underline */
+    background-color: white; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for underline */
+  
+  }
+  
+  .nav-link:hover::after {
+    width: 100%; 
+    background: red;
+    height: 3px;
+    border: 1px solid white;
+    
+  }
+  
+  .nav-link.active {
+      color: white !important; /* Active link remains white */
+      text-decoration: none;
+  }
+  
+  /* Underline animation */
+  .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left:0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.5s ease;
+      margin: auto;
+  }
+  
+  .nav-link.active::after {
+      width: 100%; /* Active link shows the full underline */
+  }
 
 .navbar-brand {
     font-weight: bold;
@@ -70,7 +98,15 @@ padding-right: 10%;
 body{
     overflow-x: hidden;
 }
-@media (max-width: 700px) {
+
+@media(max-width:1050px){
+  .mynav>.container-fluid{
+    padding-left: 2%;
+    padding-right: 2%;
+    }
+
+}
+@media (max-width: 990px) {
     .navbar {
         width: 100vw;
     
@@ -113,44 +149,16 @@ body {
    background-color: #007bff;
 }
 
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-.spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .c1 {
-    display:none;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    
+    display:block;
+    opacity: 1;
+    height: max-content;
+    padding-top: 20%;
+    padding-bottom: 20%;
     background: rgb(123, 123, 200);
-    height: 100vh;
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
@@ -164,7 +172,25 @@ body {
     background-attachment: fixed; /* Makes the background fixed */
     background-size: cover; /* Makes sure the background image covers the entire div */
     background-position: center; /* Center the image */
-    height: 100vh; /* Set a height to make the effect visible */
+    width: 100%;
+    overflow-x: hidden;
+    color: white; /* Text color for better contrast, if necessary */
+  }
+  .fixed-bg-2 {
+    background-image: url(nature1.jpg); /* Path to your image */
+    background-attachment: fixed; /* Makes the background fixed */
+    background-size: cover; /* Makes sure the background image covers the entire div */
+    background-position: center; /* Center the image */
+    width: 100%;
+    overflow-x: hidden;
+    color: white; /* Text color for better contrast, if necessary */
+  }
+
+  .fixed-bg-3 {
+    background-image: url(night1.jpg); /* Path to your image */
+    background-attachment: fixed; /* Makes the background fixed */
+    background-size: cover; /* Makes sure the background image covers the entire div */
+    background-position: center; /* Center the image */
     width: 100%;
     overflow-x: hidden;
     color: white; /* Text color for better contrast, if necessary */
@@ -173,14 +199,20 @@ body {
 .c1>.row{
     padding-left: 5%;
     padding-right: 5%;
-}
-
-.c1img {
-    display: grid;
-    place-items: center;
+    
 }
 
 
+
+.c1img{
+ 
+ display: flex;
+ align-items: center;
+ justify-content: center; 
+}
+.c1img{
+  transform: scale(.8);
+}
 
 /* Fix for column styles */
 .c1>.row>.col-lg-6 {
@@ -211,8 +243,9 @@ body {
 
 #about{
 background: black;
-height:115vh;
-margin-top: 1%;
+height: max-content;
+padding-top:1%;
+padding-bottom: 12%;
 
 color: white;
 }
@@ -222,84 +255,34 @@ color: white;
     box-sizing: border-box;
 }
 
-.swiper-container {
-        height: 80px !important; /* Set the height to 80px */
-        background-color: white; /* Set background to white */
-        overflow: hidden;
-        width:85%;
-        border: 1px solid black;
-        padding: 1%;
-        
-        
-    }
-   
-
-    /* Optional: You can also style the slides inside the Swiper */
-    
-    .swiplength>.col{
-       height: 70px;
-        transform: translateY(-55px);
-         margin:  0 2% 0 2% ;
-        background-image:url(flag.jpg);
-        background-size: cover;
-        overflow-y: hidden;
-        min-width: 100px;
-        
-       
-        
-    }
-   
-    @media (max-width: 1000px){
-        .swiplength>.col{
-            transform: translateY(-60px);
-
-        }
-       
-       
-    }
-    @media (max-width: 812px) {
-        .swiplength>.col{
-         
-             height: 50px;
-             margin-top:20px;
-             margin-bottom: 20px;
-         }
-         
-    }
-    @media (min-width: 812px) and (max-width: 816px) {
-        .swiplength > .col {
-            transform: translateY(-50px);
-        }
-    }
-    @media (min-width: 812px) and (max-width: 950px){
-        .swiplength > .col {
-            transform: translateY(-52px);
-        }
-    }
-    @media (max-width: 378px){
-        .swiplength{
-            transform: translatex(-4px)translateY(4px);
-
-        }
-    }
-    @media (min-width: 950px) and (max-width: 1000px) {
-        .swiplength > .col {
-            transform: translateY(-54px);
-        }
-    }
-    /* >>>>>>>>>>>>>>>>>>>>> */
-    .c1col{
-  opacity: 0;
-  transform: scale(1.2);
+#smallslide .owl-carousel {
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove any padding */
+  margin: 0;  /* Remove any margin */
+  width: 60%;
   
 }
 
-
-
-/*  */
-.aboutcol1 {
-    text-align: left;
+#smallslide .owl-carousel .item {
+  max-height: 70px;
+ padding: 10%;
+ margin: 1%;
+  background-color: red; /* Example color */
+  margin: 0%; /* Remove space between items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  flex-shrink: 0; /* Prevent shrinking of the items */
 }
+#smallslide .owl-carousel .item:hover{
+  transition-duration: 0.4s;
+  transform: scale(1.2);
+}
+  
 
 .aboutcol1 ul {
     padding-left: 20px;
@@ -348,65 +331,93 @@ color: white;
     }
     /* info */
    /* info */
-#info > .container {
-    margin-top: 50px;
+   #info{
+    height: max-content;
+    padding: 5%;
+  
+   }
+   #info > .container {
+    margin-top:10px;
 }
 
 #info .row {
     display: flex;
 }
 
+#info .row {
+    display: flex;
+    overflow-y: hidden;
+}
+
 #info .col-lg-6 {
     padding: 20px;
+   
+    
 }
 
 #info .col-lg-6 img {
     transition: all 0.3s ease-in-out;
+    height: 320px;
+    place-self: center;
+    
 }
 
 #info .accordion-button:focus {
     box-shadow: none;
 }
 
+
+
 /* Image enlargement when an accordion is opened */
 #info .col-lg-6 img.enlarged {
     transform: scale(1.2); /* Image enlarges */
 }
-
+#info .accordion{
+  
+}
 /* Change background color of the accordion button when opened */
 /* Change background color and add animation when the accordion button is opened */
 #info .accordion-button {
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Animate background-color and transform */
-    border-radius: 12px;
-    transition-duration: 1s;
+  transition: background-color 0.7s ease, transform 0.7s ease; /* Animate both properties over 0.7s */
+  border-radius: 0px;
+  border: 1px solid white;
 }
 
 /* Change background color and scale when the accordion button is opened */
 #info .accordion-button:not(.collapsed) {
-    background-color: #f0ad4e; /* Change to any color you prefer */
-    color: white; /* Optional: Change text color */
-    transform: scale(1.05); /* Slightly enlarge the button */
+  background-color: brown; /* Change to your desired color */
+  color: white; /* Optional: Change text color */
+  transform: scale(1.05);  /* Slightly enlarge the button */
 }
 
 /* Accordion collapsed state (default state) */
 #info .accordion-button.collapsed {
-    background-color: #007bff; /* Original default color (blue) */
-    color: white; /* Text color for collapsed state */
-    transform: scale(1); /* Return to normal size */
+  background-color: brown; /* Original default color */
+  color: white; /* Text color for collapsed state */
+  transform: scale(1); /* Normal size */
 }
 
 /* Optionally, you can add a hover effect or active state */
 #info .accordion-button:hover {
-    background-color: #e6952b; /* Darker shade for hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-    transition-duration: 1s;
+  background-color: darkbrown; /* Darker shade for hover */
+  transform: scale(1.04); /* Slightly enlarge the button on hover */
+  transition-duration: 0.3s; /* Faster hover transition */
 }
 
+
+#aaccimg{
+  
+}
 
 
  /* Progress section style */
  #progressloader{
-    background:skyblue;
+    background:brown;
+    height: max-content;
+    color: white;
+    padding-top: 5%;
+padding-bottom:5%;
+   
  }
  .progress-section {
       margin-top: 100px;
@@ -485,38 +496,49 @@ color: white;
         opacity: 1;
         transform: translateX(0); /* Final position */
       }
+     
 
+
+      #fadelr{
+        height: max-content;
+       
+      }
       /* >>>>>>>>>> */
-      #fadelr .container {
+      #fadelr .container-fluid {
       width: 100%;
-      background: #000;
       display: grid;
       place-items: center;
+      padding: 4%;
       }
       
-      #fadelr .container > div:nth-child(1) {
+      #fadelr .container-fluid > div:nth-child(1) {
         
         background-color: lightblue;
         padding: 20px;
+        text-shadow: 2px 2px 2px black;
         border-radius: 12px;
       }
       
-      #fadelr .container > div:nth-child(3) {
+      #fadelr .container-fluid > div:nth-child(3) {
         
         background-color: yellow;
         padding: 20px;
         border-radius: 12px;
         border: 2px solid yellow;
+        text-shadow: 2px 2px 2px black;
 
       }
       
 
       /* gsap */
       #gsap{
-        height: 100vh;
+        height: max-content;
+       
+        padding-bottom:10px ;
       }
       #gsap>.container>.row>.col-lg-3{
         margin: 1%;
+        
         height: 400px;
       }
     
@@ -526,6 +548,9 @@ color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Slight shadow */
     max-width: 270px;
     border: none;
+    padding: 3%;
+   
+
       }
       .fade-up-1 {
         opacity: 0;
@@ -537,9 +562,8 @@ color: white;
         opacity: 1;
         transform: translateY(0); /* Final position */
       }
-  
-      /* Fade-up 2 (slower than fade-up 1) */
-      .fade-up-2 {
+
+.fade-up-2 {
         opacity: 0;
         transform: translateY(50px); /* Start position */
         transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s; /* Faster with short delay */
@@ -547,10 +571,10 @@ color: white;
   
       .fade-up-2.visible {
         opacity: 1;
-        transform: translateY(0); /* Final position */
-      }
-  
-      /* Fade-up 3 (slower than fade-up 2) */
+        transform: translateY(0); /* Final position */}
+
+
+ /* Fade-up 3 (slower than fade-up 2) */
       .fade-up-3 {
         opacity: 0;
         transform: translateY(50px); /* Start position */
@@ -561,52 +585,106 @@ color: white;
         opacity: 1;
         transform: translateY(0); /* Final position */
       }
-   
-
-      #carousel > .owl-carousel > .card {
-        display: inline-block;
-        width: 200px;
+     
+      
+      #carousel{
+        background: rgb(113, 82, 113);
+       
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+      }
+      
+      .owl-carousel .card {
+        background-color: #f4f4f4;
         height: 300px;
-        background-color: #f2f2f2;
-        margin-right: 10px;
+        padding: 10%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        transition: transform 0.3s ease;
+        font-family: Arial, sans-serif;
+        transform: scale(0.9);
       }
       
-      #carousel > .owl-carousel {
+      .card h3 {
+        font-size: 20px;
+        color: #333;
+      }
+      
+      .card p {
+        font-size: 16px;
+        color: #555;
+      }
+      
+      .card:hover {
+        transform: scale(1);
+        transition: all 0.4s ease-in-out;
+        
+      }
+      
+
+
+      .user-info {
+        display: grid;
+        place-items: center;
+      }
+      .user-info> img{
+        margin: 4%;
+        border: 1px solid grey;
+      }
+      .user-info > .user-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      
+      .user-info > .user-details {
         display: flex;
-        flex-wrap: nowrap;
-        overflow: hidden;
+        flex-direction: column;
       }
-      #carousel > .owl-carousel .card{
-        height: 300px;
-        width: 290px;
-      }
-      #carousel > .owl-carousel .card h3 {
+      
+      .user-info > .user-details h2 {
+        margin: 0;
         font-size: 18px;
-        margin-bottom: 10px;
       }
       
-      #carousel > .owl-carousel .card p {
+      .user-info > .user-details p {
+        margin: 0;
+        color: gray;
         font-size: 14px;
-        color: #666;
       }
       
+      
+      .skills-list li {
+        font-size: 14px;
+        color: #333;
+        list-style-type: square; /* Square bullet points */
+      }
+      
+      .skills-list li:not(:last-child) {
+        margin-bottom: 5px; /* Space between list items */
+      }
 
+   /* >>>>>>>>>>>> */
+#form{
 
+ 
+}
+  #form>.container{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 4%;
+    border-radius: 12px;
+    background:rgba(0, 0, 0, 0.276);
+  }
 /* Media query for devices with 
 */
 @media screen and (max-width: 900px) {
-  .loading-screen{
-    display: none;
-  }
-  .spinner{
-    display: none;
-  }
+  
   html, body {
     overflow-x: hidden;
   }
 }
+/* General Styling */
