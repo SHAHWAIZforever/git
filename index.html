@@ -75,7 +75,7 @@
       
         <BR><br></BR>
         <div class="row">
-            <div class="col-lg-6 c1col">
+            <div class="col-lg-6 c1col camedown">
               <BR><BR></BR></BR>
                 <h1><b>Front End Project</b></h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi laboriosam tempora nobis illum fugit.
@@ -102,35 +102,50 @@
     </div>
  
     <div id="about">
-        <center  id="smallslide" >
-         
-            
       
-        
-      
-        
+     <center id="smallslide" class="fade-down">
+      <div class="owl-carousel">
+        <!-- Card for HTML -->
+        <div class="card">
+          <h3>HTML</h3>
          
-    </center>
+        </div>
+        <!-- Card for CSS -->
+        <div class="card">
+          <h3>CSS</h3>
+          
+        </div>
+        <!-- Card for JavaScript -->
+        <div class="card">
+          <h3>JavaScript</h3>
+          
+        </div>
+        <!-- Card for MySQL -->
+        <div class="card">
+          <h3>MySQL</h3>
+          
+        </div>
+        <!-- Card for PHP -->
+        <div class="card">
+          <h3>PHP</h3>
+         
+        </div>
+        <!-- Card for GSAP -->
+        <div class="card">
+          <h3>GSAP</h3>
+        
+        </div>
+      </div>
 
-   
- 
- 
-
-
-
-
-
-
-
-
-   <BR></BR>
-           <center class="fade-up">
+     </center>
+           <center class=" fade-up">
+            <br>
             <h2>Fade up-down</h2>
            </center>
   <BR></BR>
           <div class="container">
 <div class="row">
-    <div class="col-lg-6 aboutcol1 fade-up">
+    <div class="col-lg-6 aboutcol1  fade-up">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam praesentium culpa quo inventore iusto officia, alias cumque quam doloremque fugit perferendis reiciendis fuga aliquid obcaecati deleniti tempora. Esse asperiores, iure necessitatibus odit possimus laborum officiis sed. Ducimus neque nesciunt omnis.</p>
         <ul>
             <li><i class="fas fa-check-circle" style="color: rgb(142, 142, 239);"></i> lorem</li>
@@ -138,7 +153,7 @@
             <li><i class="fas fa-check-circle" style="color: rgb(142, 142, 239);"></i> working fine</li>
         </ul>
     </div>
-    <div class="col-lg-6 fade-up-slow">
+    <div class="col-lg-6  fade-up-slow">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum libero ipsa minus laboriosam consequatur dolor eligendi exercitationem quibusdam, iste, delectus magni voluptates voluptatibus optio eius ipsam quia recusandae facilis culpa.</p>
         <div class="row">
             <div class="d-flex justify-content-left">
@@ -153,65 +168,62 @@
 
     </div>
 
-   
-    <div  id="info" class="fixed-bg-2">
-        <BR></BR>
-        <center class="fade-down "><h2><b>Picture Accordian</b></h2></center>
-        <br>
-        <div class="container ">
-            <div class="row">
-                <!-- Left Column: Text and Accordions -->
-                <div class="col-lg-6 fade-up">
-                    <p>Picture interacts with accordians</p>
-    
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Accordion 1
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body" >
-                                    Content for Accordion 1
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Accordion 2
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Content for Accordion 2
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Accordion 3
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Content for Accordion 3
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Right Column: Image -->
-                <div class="col-lg-6 fade-up-slow" style="display: grid;place-items: center;">
-                    <img id="infoImage" src="hero-img.png" alt="Info Image" >
-                </div>
-            </div>
-            <BR><br></BR>
-        </div>        
-    </div>
+   <section id="info" class="fixed-bg-2">
+    <div class="infopage " >
+      <div class="container">
+          <div class="row">
+              <!-- Left Column: Text and Accordions -->
+              <div class="col-lg-6 fade-up">
+                  <p>This is some introductory text on the left side of the page.</p>
+
+                  <div class="accordion" id="accordionExample">
+                      <div class="accordion-item">
+                          <h2 class="accordion-header target-2" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  Accordion 1
+                              </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  Content for Accordion 1
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Accordion 2
+                              </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  Content for Accordion 2
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Accordion 3
+                              </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  Content for Accordion 3
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            
+              <!-- Right Column: Image -->
+              <div class="col-lg-6 fade-up-slow " style="display: grid;place-items: center;">
+                  <img id="infoImage" src="hero-img.png" alt="Info Image" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
 
     <section id="progressloader" >
         <br>
@@ -220,11 +232,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 fade-up">
-               <img src="hero-img.png" alt="" height="500" width="auto" id="progressimg" class="popping">
+               <img src="hero-img.png" alt="" height="500" width="auto" id="progressimg" class="popping " style="transform: translateX(30px);">
                 </div>
                 <div class="col-lg-6">
                      <!-- Progress Loader Section -->
-  <div class="progress-section" id="progressSection">
+  <div class="progress-section fade-up" id="progressSection">
     <div class="progress-bar-container">
       <div class="progress-bar html-progress">
         <span class="progress-text" id="htmlText">HTML 0%</span>
@@ -250,13 +262,13 @@
     
     <div id="fadelr" class="fixed-bg-3">
         <BR></BR>
-        <center class="fade-down"><h2>Fade left-right</h2></center>
-      <div class="container-fluid" style="height:60vh;width: 100%;">
-        <div class="fade-left">
+        <center class=" fade-down"><h2>Fade left-right</h2></center>
+      <div class="container-fluid" style="width: 100%;">
+        <div class=" fade-left">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aliquam saepe facere ad voluptatibus amet consequuntur sit quasi dignissimos doloremque.
           </div>
            <br>
-          <div class="fade-right">
+          <div class=" fade-right">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sunt error eos. Optio ipsum voluptatum at corrupti provident reiciendis pariatur numquam minus tempora itaque qui voluptatibus, amet impedit deleniti ad.
           </div>
       </div>
@@ -270,7 +282,7 @@
       <div class="container gsapcontainer ">
         <div class="row justify-content-center">
           <!-- First Fade-Up 1 Example -->
-          <div class="col-lg-3 fade-up-1 ">
+          <div class="col-lg-3  fade-up-1">
             <div class="user-info">
               <img src="user.jpg" alt="User Avatar" class="user-avatar">
               <div class="user-details">
@@ -291,7 +303,7 @@
           </div>
          
           <!-- Second Fade-Up 2 Example (slower) -->
-          <div class="col-lg-3 fade-up-2">
+          <div class="col-lg-3  fade-up-2">
             <div class="user-info">
               <img src="user.jpg" alt="User Avatar" class="user-avatar">
               <div class="user-details">
@@ -315,7 +327,7 @@
          
 
     
-        <div class="col-lg-3 fade-up-3">
+        <div class="col-lg-3 target-8 fade-up-3">
             <div class="user-info">
               <img src="user.jpg" alt="User Avatar" class="user-avatar">
               <div class="user-details">
@@ -338,9 +350,9 @@
       </div>
     </div>
       
-    <section id="carousel" class="fade-up-slow">
+    <section id="carousel" class="fade-up">
       <br>
-      <center><h2>Tech Stack Carousel</h2></center>
+      <center class="fade-down"><h2>Tech Stack Carousel</h2></center>
       <br>
       <div class="owl-carousel">
         <!-- Card for HTML -->
@@ -378,7 +390,7 @@
 
     </section>
   
-    <div id="form" class="fade-up-slow" >
+    <div id="form" class=" fade-up" >
       <BR></BR>
       <div class="container">
         <h2 class="text-center">Person Information Form</h2>
@@ -437,8 +449,8 @@
             <!-- Gender -->
             <div class="mb-3">
                 <label class="form-label">Gender</label><br>
-                <input type="radio" id="genderMale" name="gender" value="Male" required> <label for="genderMale">Male</label><br>
-                <input type="radio" id="genderFemale" name="gender" value="Female" required> <label for="genderFemale">Female</label><br>
+                <input type="radio" id="genderMale" name="gender" value="Male" required> <label for="genderMale" class="cursor">Male</label><br>
+                <input type="radio" id="genderFemale" name="gender" value="Female" required> <label for="genderFemale" class="cursor">Female</label><br>
                 <div class="invalid-feedback">
                     Please select a gender.
                 </div>
@@ -455,10 +467,10 @@
 
         <BR></BR>
     </div>
-    <br>
+    <BR></BR>
     </div>
 
-            
+        
                 
     
     

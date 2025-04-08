@@ -1,371 +1,378 @@
-  // Form Validation
-  (function () {
-    'use strict'
-    var forms = document.querySelectorAll('.needs-validation')
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          } else {
-            event.preventDefault(); // Prevent form submission for now
-            displayInfo();
-          }
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })();
-
-  function displayInfo() {
-    var name = document.getElementById("name").value;
-    var pic = document.getElementById("pic").files[0];
-    var age = document.getElementById("age").value;
-    var education = document.getElementById("education").value;
-    var contact = document.getElementById("contact").value;
-    var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : "Not selected";
-
-    var picURL = pic ? URL.createObjectURL(pic) : "https://via.placeholder.com/150"; // Fallback image URL
-
-    var infoHTML = `
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Profile Picture:</strong></p>
-      <p><img src="${picURL}" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;"></p>
-      <p><strong>Age:</strong> ${age}</p>
-      <p><strong>Education:</strong> ${education}</p>
-      <p><strong>Contact:</strong> ${contact}</p>
-      <p><strong>Gender:</strong> ${gender}</p>
-    `;
-    document.getElementById("displayInfo").innerHTML = infoHTML;
-  }
-
-  // Owl Carousel Script
-  $(document).ready(function() {
-    $('#carousel .owl-carousel').owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 10,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: { items: 1 },
-        600: { items: 2 },
-        1000: { items: 4 }
+// Form Validation
+(function () {
+  'use strict';
+  var forms = document.querySelectorAll('.needs-validation');
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        event.preventDefault(); // Prevent form submission for now
+        displayInfo();
       }
-    });
+      form.classList.add('was-validated');
+    }, false);
   });
+})();
 
-  // Scroll fade-up functionality
-  window.addEventListener('scroll', function() {
-    const fadeUp1Elements = document.querySelectorAll('.fade-up-1');
-    fadeUp1Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+function displayInfo() {
+  var name = document.getElementById("name").value;
+  var pic = document.getElementById("pic").files[0];
+  var age = document.getElementById("age").value;
+  var education = document.getElementById("education").value;
+  var contact = document.getElementById("contact").value;
+  var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : "Not selected";
 
-    const fadeUp2Elements = document.querySelectorAll('.fade-up-2');
-    fadeUp2Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+  var picURL = pic ? URL.createObjectURL(pic) : "https://via.placeholder.com/150"; // Fallback image URL
 
-    const fadeUp3Elements = document.querySelectorAll('.fade-up-3');
-    fadeUp3Elements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+  var infoHTML = `
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Profile Picture:</strong></p>
+    <p><img src="${picURL}" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%;"></p>
+    <p><strong>Age:</strong> ${age}</p>
+    <p><strong>Education:</strong> ${education}</p>
+    <p><strong>Contact:</strong> ${contact}</p>
+    <p><strong>Gender:</strong> ${gender}</p>
+  `;
+  document.getElementById("displayInfo").innerHTML = infoHTML;
+}
 
-    const fadeLeftElements = document.querySelectorAll('.fade-left');
-    fadeLeftElements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    const fadeRightElements = document.querySelectorAll('.fade-right');
-    fadeRightElements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
 
-    const fadeUpElements = document.querySelectorAll('.fade-up');
-    fadeUpElements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-
-    const fadeDownElements = document.querySelectorAll('.fade-down');
-    fadeDownElements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-
-    const fadeUpSlowElements = document.querySelectorAll('.fade-up-slow');
-    fadeUpSlowElements.forEach(function(element) {
-      const rect = element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
-  });
-
-  // Swiper Initialization
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+// Custom Owl Carousel (Pure JS version)
+$(document).ready(function() {
+  $('#carousel .owl-carousel ').owlCarousel({
+    items: 4,
     loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 4 }
     }
   });
+});
 
-  // Small Slide Owl Carousel
-  const owlCarousel = document.querySelector('#smallslide .owl-carousel');
-  if (owlCarousel) {
-    $(owlCarousel).owlCarousel({
-      items: 6,
-      loop: true,
-      margin: 10,
-      nav: true,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: true,
+
+// Custom Owl Carousel (Pure JS version)
+$(document).ready(function() {
+  $('#smallslide .owl-carousel ').owlCarousel({
+    items: 6,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 4 }
+    }
+  });
+});
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const accordionButtons = document.querySelectorAll('.accordion-button');
+const collapseElements = document.querySelectorAll('.accordion-collapse');
+const image = document.getElementById('infoImage');
+
+// Function to enlarge the image
+function enlargeImage() {
+    image.classList.add('enlarged');
+}
+
+// Function to shrink the image
+function shrinkImage() {
+    image.classList.remove('enlarged');
+}
+
+// Add event listeners to handle accordion opening and closing
+collapseElements.forEach((collapse) => {
+    // When the accordion is opening
+    collapse.addEventListener('show.bs.collapse', () => {
+        enlargeImage();
     });
+
+    // When the accordion is closing
+    collapse.addEventListener('hide.bs.collapse', () => {
+        shrinkImage();
+    });
+});
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Grab elements
+const progressSection = document.getElementById('progressSection');
+const htmlProgressBar = document.querySelector('.html-progress');
+const cssProgressBar = document.querySelector('.css-progress');
+const jsProgressBar = document.querySelector('.js-progress');
+const htmlText = document.getElementById('htmlText');
+const cssText = document.getElementById('cssText');
+const jsText = document.getElementById('jsText');
+
+// Progress values (can be changed here)
+const htmlProgress = 40;
+const cssProgress = 57;
+const jsProgress = 90;
+
+// Function to update the text and width of progress bars with custom labels
+function updateProgressBar(bar, textElement, progress) {
+  // Set the width of the progress bar
+  bar.style.width = `${progress}%`;
+
+  // Custom text based on progress
+  if (bar.classList.contains('html-progress')) {
+    textElement.innerText = ` HTML : ${progress}%`;
+  } else if (bar.classList.contains('css-progress')) {
+    textElement.innerText = ` CSS : ${progress}%`;
+  } else if (bar.classList.contains('js-progress')) {
+    textElement.innerText = ` JavaScript : ${progress}%`;
+  }
+}
+
+// Function to animate progress with larger increments
+function animateProgress() {
+  let html = 0, css = 0, js = 0;
+  
+  // Function to increase progress bars in larger increments
+  function step() {
+    let isAnimating = false;
+    
+    if (html < htmlProgress) {
+      html += 5;  // Increase the increment for faster animation
+      if (html > htmlProgress) html = htmlProgress;  // Clamp to the max value
+      updateProgressBar(htmlProgressBar, htmlText, html);
+      isAnimating = true;
+    }
+
+    if (css < cssProgress) {
+      css += 5;  // Increase the increment for faster animation
+      if (css > cssProgress) css = cssProgress;  // Clamp to the max value
+      updateProgressBar(cssProgressBar, cssText, css);
+      isAnimating = true;
+    }
+
+    if (js < jsProgress) {
+      js += 5;  // Increase the increment for faster animation
+      if (js > jsProgress) js = jsProgress;  // Clamp to the max value
+      updateProgressBar(jsProgressBar, jsText, js);
+      isAnimating = true;
+    }
+
+    if (isAnimating) {
+      setTimeout(step, 20);  // Faster, controlled animation with `setTimeout`
+    }
   }
 
-  // Accordion Image Resizing
-  const collapseElements = document.querySelectorAll('.accordion-collapse');
-  const image = document.getElementById('infoImage');
-  function checkAccordionState() {
-    let anyOpen = false;
-    collapseElements.forEach((collapseElement) => {
-      if (collapseElement.classList.contains('show')) {
-        anyOpen = true;
-      }
-    });
+  step();
+}
 
-    if (anyOpen) {
-      image.classList.add('enlarged');
+// Reset progress
+function resetProgress() {
+  htmlProgressBar.style.width = '0%';
+  cssProgressBar.style.width = '0%';
+  jsProgressBar.style.width = '0%';
+  htmlText.innerText = ' HTML: 0%';
+  cssText.innerText = ' CSS : 0%';
+  jsText.innerText = ' JavaScript : 0%';
+}
+
+// IntersectionObserver to trigger animations
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      progressSection.classList.add('animate');
+      animateProgress();
     } else {
-      image.classList.remove('enlarged');
+      progressSection.classList.remove('animate');
+      resetProgress();
     }
-  }
-
-  collapseElements.forEach((collapseElement) => {
-    collapseElement.addEventListener('shown.bs.collapse', function() {
-      checkAccordionState();
-    });
-
-    collapseElement.addEventListener('hidden.bs.collapse', function() {
-      checkAccordionState();
-    });
   });
-  checkAccordionState();
+}, { threshold: 0.5 });
 
-  // Progress Bars with IntersectionObserver
-  const progressSection = document.getElementById('progressSection');
-  const htmlProgressBar = document.querySelector('.html-progress');
-  const cssProgressBar = document.querySelector('.css-progress');
-  const jsProgressBar = document.querySelector('.js-progress');
-  const htmlText = document.getElementById('htmlText');
-  const cssText = document.getElementById('cssText');
-  const jsText = document.getElementById('jsText');
+progressObserver.observe(progressSection);
 
-  const htmlProgress = 40;
-  const cssProgress = 57;
-  const jsProgress = 90;
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-  function animateProgress() {
-    let html = 0;
-    let css = 0;
-    let js = 0;
+// Select all the navigation links
+const navLinks = document.querySelectorAll('.nav-link');
 
-    const htmlInterval = setInterval(() => {
-      if (html < htmlProgress) {
-        html += 2;
-        htmlProgressBar.style.width = html + '%';
-        htmlText.innerText = 'HTML ' + html + '%';
-      } else {
-        clearInterval(htmlInterval);
-      }
-    }, 20);
-
-    const cssInterval = setInterval(() => {
-      if (css < cssProgress) {
-        css += 2;
-        cssProgressBar.style.width = css + '%';
-        cssText.innerText = 'CSS ' + css + '%';
-      } else {
-        clearInterval(cssInterval);
-      }
-    }, 20);
-
-    const jsInterval = setInterval(() => {
-      if (js < jsProgress) {
-        js += 2;
-        jsProgressBar.style.width = js + '%';
-        jsText.innerText = 'JS ' + js + '%';
-      } else {
-        clearInterval(jsInterval);
-      }
-    }, 20);
-  }
-
-  function resetProgress() {
-    htmlProgressBar.style.width = '0%';
-    cssProgressBar.style.width = '0%';
-    jsProgressBar.style.width = '0%';
-    htmlText.innerText = 'HTML 0%';
-    cssText.innerText = 'CSS 0%';
-    jsText.innerText = 'JS 0%';
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        progressSection.classList.add('animate');
-        animateProgress();
-      } else {
-        progressSection.classList.remove('animate');
-        resetProgress();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  observer.observe(progressSection);
-
-  // Active Link and Smooth Scrolling
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetSection = document.querySelector(this.getAttribute('href'));
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
+// Smooth scroll when clicking on links
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
 
+      // Remove active class from all links and add it to the clicked one
       navLinks.forEach(link => link.classList.remove('active'));
       this.classList.add('active');
-    });
-  });
-
-  document.getElementById('homeLink').addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
-    navLinks.forEach(link => link.classList.remove('active'));
-    this.classList.add('active');
-  });
-
-  // GSAP ScrollTrigger for dynamic effects on scroll
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.to(".navbar", {
-    scrollTrigger: {
-      trigger: "body",
-      start: "top top",
-      end: "bottom top",
-      scrub: true
-    },
-    backgroundColor: "rgba(0, 0, 0, 0.2)"
-  });
-
-  document.addEventListener("DOMContentLoaded", function() {
-    gsap.to('.popping', {
-      y: -15,
-      duration: .8,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
-  });
-
-  window.addEventListener('load', function() {
-    gsap.from('.c1col', {
-      delay: 0,
-      duration: 1,
-      y: -140,
-      opacity: 0,
-      scale: 0.8,
-      scaleX: 1,
-      scaleY: 1,
-      scaleOrigin: "center",
-      ease: "power1.out",
-    });
-  });
-
-
-  window.onload = function() {
-    const typingEffectElement = document.getElementById('typingEffect');
-    const text = "I'm a Web Developer";
-    let index = 0;
-    const typingSpeed = 150; // Speed for typing
-    const deletingSpeed = 100; // Speed for deleting
-    const pauseTime = 1000; // Time to pause before starting deletion or typing
-
-    // Function to type the text
-    function typeText() {
-        if (index < text.length) {
-            typingEffectElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeText, typingSpeed);
-        } else {
-            // Pause before deleting text
-            setTimeout(deleteText, pauseTime);
-        }
     }
+  });
+});
 
-    // Function to delete the text
-    function deleteText() {
-        if (index > 0) {
-            typingEffectElement.textContent = typingEffectElement.textContent.slice(0, index - 1);
-            index--;
-            setTimeout(deleteText, deletingSpeed);
-        } else {
-            // Pause before typing again
-            setTimeout(typeText, pauseTime);
-        }
+// Add Intersection Observer to detect when sections are in view
+const observerOptions = {
+  root: null, // Observe intersections relative to the viewport
+  threshold: 0.5 // Trigger when 50% of the section is visible
+};
+
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+
+    if (entry.isIntersecting) {
+      // Add active class when section is in view
+      link.classList.add('active');
+    } else {
+      // Remove active class when section is out of view
+      link.classList.remove('active');
     }
+  });
+}, observerOptions);
 
-    // Start typing effect when page loads
-    typeText();
+// Observe each section in the page
+document.querySelectorAll('section').forEach(section => {
+  navObserver.observe(section);
+});
+
+// Home link smooth scroll (when clicking on the "Home" link)
+document.getElementById('homeLink')?.addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  // Remove active class from all links and add it to the Home link
+  navLinks.forEach(link => link.classList.remove('active'));
+  this.classList.add('active');
+});
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Typing effect (Auto typing and deleting text)
+window.onload = function () {
+  const typingEffectElement = document.getElementById('typingEffect');
+  const text = "I'm a Web Developer";
+  let index = 0;
+  const typingSpeed = 150; // Speed for typing
+  const deletingSpeed = 100; // Speed for deleting
+  const pauseTime = 1000; // Time to pause before starting deletion or typing
+
+  // Function to type the text
+  function typeText() {
+    if (index < text.length) {
+      typingEffectElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeText, typingSpeed);
+    } else {
+      // Pause before deleting text
+      setTimeout(deleteText, pauseTime);
+    }
+  }
+
+  // Function to delete the text
+  function deleteText() {
+    if (index > 0) {
+      typingEffectElement.textContent = typingEffectElement.textContent.slice(0, index - 1);
+      index--;
+      setTimeout(deleteText, deletingSpeed);
+    } else {
+      // Pause before typing again
+      setTimeout(typeText, pauseTime);
+    }
+  }
+
+  // Start typing effect when page loads
+  typeText();
+};
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.to('.popping', {
+    y: -15,
+    duration: .7,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true,
+  });
+})
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+// For mobile touch events
+window.addEventListener('touchstart', handleScroll, false);
+window.addEventListener('touchmove', handleScroll, false);
+window.addEventListener('touchend', handleScroll, false);
+
+// Scroll event for desktop
+window.addEventListener('scroll', handleScroll, false);
+
+function handleScroll() {
+  const fadeElements = document.querySelectorAll('.fade-up, .fade-up-1, .fade-up-2, .fade-up-3, .fade-left, .fade-right, .fade-down, .fade-up-slow');
+  fadeElements.forEach(function (element) {
+    const rect = element.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+  });
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>dom load
+
+// onload effect (GSAP Animation)
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.fromTo('.camedown', {
+    y: -100,
+    opacity: 0,
+    scale:0.7
+  }, {
+    y: 0, // ending y position
+    opacity: 1,
+    scale: 1.05, // corrected scale property
+    duration: 1.2,
+    ease: "power1.inOut",
+  });
+});
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Apply the scroll effect to the navbar
+gsap.to(".navbar", {
+  scrollTrigger: {
+    trigger: "body",  // The body element triggers the scroll event
+    start: "top top",  // Start the effect when the top of the body reaches the top of the viewport
+    end: "bottom top", // End the effect when the bottom of the body reaches the top of the viewport
+    scrub: true         // Smoothly scrub the background color change as the page scrolls
+  },
+  backgroundColor: "rgba(0, 0, 0, 0.2)",  // Change the navbar background to a semi-transparent black
+});
