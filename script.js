@@ -16,6 +16,7 @@
   });
 })();
 
+
 function displayInfo() {
   var name = document.getElementById("name").value;
   var pic = document.getElementById("pic").files[0];
@@ -322,6 +323,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// // For mobile touch events
+// window.addEventListener('touchstart', handleScroll, false);
+// window.addEventListener('touchmove', handleScroll, false);
+// window.addEventListener('touchend', handleScroll, false);
+
+// // Scroll event for desktop
+// window.addEventListener('scroll', handleScroll, false);
+
+// function handleScroll() {
+//   const fadeElements = document.querySelectorAll('.fade-up, .fade-up-1, .fade-up-2, .fade-up-3, .fade-left, .fade-right, .fade-down, .fade-up-slow');
+//   fadeElements.forEach(function (element) {
+//     const rect = element.getBoundingClientRect();
+//     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+//       element.classList.add('visible');
+//     } else {
+//       element.classList.remove('visible');
+//     }
+//   });
+// }
+
+// Throttled scroll handler
+let isScrolling = false;
+
+function handleScroll() {
+  if (isScrolling) return;
+
+  isScrolling = true;
+  requestAnimationFrame(() => {
+    const fadeElements = document.querySelectorAll('.fade-up, .fade-up-1, .fade-up-2, .fade-up-3, .fade-left, .fade-right, .fade-down, .fade-up-slow');
+    fadeElements.forEach(function (element) {
+      const rect = element.getBoundingClientRect();
+      // Add a small buffer (50px) to trigger visibility a bit earlier
+      if (rect.top <= window.innerHeight && rect.bottom >= -50) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
+
+    isScrolling = false;
+  });
+}
+
 // For mobile touch events
 window.addEventListener('touchstart', handleScroll, false);
 window.addEventListener('touchmove', handleScroll, false);
@@ -330,17 +374,9 @@ window.addEventListener('touchend', handleScroll, false);
 // Scroll event for desktop
 window.addEventListener('scroll', handleScroll, false);
 
-function handleScroll() {
-  const fadeElements = document.querySelectorAll('.fade-up, .fade-up-1, .fade-up-2, .fade-up-3, .fade-left, .fade-right, .fade-down, .fade-up-slow');
-  fadeElements.forEach(function (element) {
-    const rect = element.getBoundingClientRect();
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      element.classList.add('visible');
-    } else {
-      element.classList.remove('visible');
-    }
-  });
-}
+// Optionally, call handleScroll on initial page load to show elements that may already be in view
+window.addEventListener('load', handleScroll, false);
+
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>dom load
 
