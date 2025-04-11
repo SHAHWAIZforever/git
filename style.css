@@ -194,6 +194,17 @@ background: #000;
   background-repeat: no-repeat; /* Prevents image repetition */
 }
 
+@media(max-width:600px){
+  .fixed-bg-3{
+    background-image: url(dark\ goku\ -\ Copy.jpg);
+  }
+  .fixed-bg-2{
+    background-image:url(black\ goku\ -\ Copy.jpg)
+  }
+  .fixed-bg-div{
+    background-image: url(home\ -\ Copy.jpg);
+  }
+}
 .c1>.row {
   padding-left: 5%;
   padding-right: 5%;
