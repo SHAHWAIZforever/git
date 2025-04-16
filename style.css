@@ -1,739 +1,285 @@
-.container-fluid {
-  overflow-x: hidden;
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    font-size: 1.2rem;
 }
+
+@media (min-width: 992px) {
+    .navbar-custom {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .dropdown-menu a:hover {
+    color: #00bfff; /* Light Blue */
+    transition: color 0.4s ease-in-out;
+}
+
+/* Highlight active nav link */
+.navbar-custom .nav-link.active {
+    color: #00bfff !important;
+}
+
+/* Dropdown menu styles */
+.navbar-custom .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition duration 0.5s */
+    border: none;
+    pointer-events: none; /* Prevent interaction when not visible */
+}
+
+/* Show dropdown with smooth animation */
+.navbar-custom .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+/* Ensure a smooth hover effect for dropdown items */
+.navbar-custom .dropdown-menu a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Body padding to make space for fixed navbar */
 body {
-  overflow-x: hidden;
+    padding-top: 70px; /* Space for fixed navbar */
+    background: #f8f9fa;
+    overflow-x: hidden;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.navbar-custom .nav-link.active {
+    color: #00bfff !important;
 }
 
-.mynav {
-  background: none;
-  height: 100px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  padding: 10px;
-  box-sizing: border-box;
+.nav-item > button {
+    background: rgb(24, 182, 235);
+    border: none;
 }
 
-.mynav>.container-fluid {
-  padding-left: 5%;
-  padding-right: 5%;
+.nav-item > button:hover {
+    background: rgb(24, 154, 190);
+    transition: 0.2s ease-in-out;
 }
 
-/* General styling for navigation links */
-.nav-link {
-  color: white !important; /* Force all links to be white */
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 5px;
-  transition: color 0.3s ease;
+/* Make the dropdown menu appear on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
 }
 
-.nav-link:hover {
-  color: white !important; /* Ensure color is white on hover */
+/* Style for the deep dropdown inside the main dropdown */
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover > .dropdown-menu {
+    display: block;
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px; /* Height of the underline */
-  background-color: white; /* Color of the underline */
-  transition: width 0.3s ease; /* Smooth animation for underline */
+/* Ensure that the deep dropdown is hidden by default */
+.nav-item .dropdown-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
 }
 
-.nav-link:hover::after {
-  width: 100%;
-  background: red;
-  height: 3px;
-  border: 1px solid white;
+/* Add a small delay to make the hover effect smooth */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    transition: all 0.3s ease-in-out;
+    background: white;
 }
 
-/* Active link style */
-.nav-link.active {
-  color: white !important; 
-  text-shadow: 2px 2px 2px black;
-  font-weight: bold; /* Make the active link bold */
-  text-decoration: none;
+/* Default black color for dropdown links */
+.navbar-custom .dropdown-menu .dropdown-item {
+    color: black; /* Default color for dropdown links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-.nav-link.active::after {
-  width: 100%; /* Full underline on active link */
-  background-color: white; /* Golden underline for active links */
-  height: 4px; /* Increase underline height for active links */
+/* Change color to light blue on hover */
+.navbar-custom .dropdown-menu .dropdown-item:hover {
+    color: #00bfff; /* Light Blue on hover */
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-/* Specific Home link active state */
-#homeLink.active {
-  color: white !important; 
-  text-shadow: 2px 2px 2px black;
-  font-weight: bold;
-}
-
-#homeLink.active::after {
-  background-color:white; /* Golden underline for the Home link */
-}
-
-/* Navbar brand styling */
-.navbar-brand {
-  font-weight: bold;
-  color: white;
-  font-size: 24px;
-  text-shadow: 2px 2px 2px black;
+/* Deep dropdown item hover effect */
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover > .dropdown-menu {
+    display: block;
+    color: #00bfff; /* Light blue color on hover */
+    transition: all 0.3s ease-in-out;
 }
 
 
-
-body {
-  overflow-x: hidden;
-}
-
-@media(max-width: 1050px) {
-  .mynav>.container-fluid {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-
-@media (max-width: 990px) {
-  .navbar {
-    width: 100vw;
+  /* Container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
 
-  .nav-item {
-    background: rgb(50, 49, 49);
-    padding: 5%;
+  /* Trigger link */
+  .dropdown > a {
+    text-decoration: none;
+    color:white;
+    padding: 10px 15px;
+    display: inline-block;
+    
   }
-}
-
-
-
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  padding: 20px;
-}
-
-#home {
-  background-color: rgb(123, 123, 200);
-}
-
-#mainContent {
-  display: block;
-}
-
-#about {
-  background-color: rgb(63, 63, 75);
-}
-
-.navbar-toggler {
-  background-color: #007bff;
-}
-
-.c1 {
-  display: block;
-  opacity: 1;
-  height: max-content;
-  padding-top: 20%;
-  padding-bottom: 20%;
-background: #000;
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  position: relative;
-  overflow: hidden !important;
-}
-
-.fixed-bg-div {
-  background-attachment: fixed; /* Makes the background fixed */
-  background-size: cover; /* Makes sure the background image covers the entire div */
-  background-position: center; /* Center the image */
-  width: 100%;
-  background-image: url(home.jpg);
-  height: 100vh; /* Ensures the background covers the full viewport height */
-  overflow-x: hidden;
-  color: white; /* Text color for better contrast */
-  background-repeat: no-repeat; /* Prevents image repetition */
-}
-
-.fixed-bg-2 {
-  background-image: url(black\ goku.jpg); /* Path to your image */
-  background-attachment: fixed; /* Makes the background fixed */
-  background-size: cover; /* Makes sure the background image covers the entire div */
-  background-position: center; /* Center the image */
-  width: 100%;
-  height: 100vh; /* Ensures the background covers the full viewport height */
-  overflow-x: hidden;
-  color: white; /* Text color for better contrast */
-  background-repeat: no-repeat; /* Prevents image repetition */
-}
-
-.fixed-bg-3 {
-  background-image: url(dark\ goku.jpg); /* Path to your image */
-  background-attachment: fixed; /* Makes the background fixed */
-  background-size: cover; /* Makes sure the background image covers the entire div */
-  background-position: center; /* Center the image */
-  width: 100%;
-  height: 100vh; /* Ensures the background covers the full viewport height */
-  overflow-x: hidden;
-  color: white; /* Text color for better contrast */
-  background-repeat: no-repeat; /* Prevents image repetition */
-}
-
-@media(max-width:600px){
-  .fixed-bg-3{
-    background-image: url(dark\ goku\ -\ Copy.jpg);
+  .dropdown > a:hover{
+    color: #00bfff;
+    transition: 0.4s ease-in-out;
   }
-  .fixed-bg-2{
-    background-image:url(black\ goku\ -\ Copy.jpg)
-  }
-  .fixed-bg-div{
-    background-image: url(home\ -\ Copy.jpg);
-  }
-}
-.c1>.row {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.c1img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.c1img {
-  transform: scale(.8);
-}
-
-/* Fix for column styles */
-.c1>.row>.col-lg-6 {
-  padding: 20px;
-}
-
-.c1>.row>.col-lg-6 img {
-  width: 90%; /* Make image responsive */
-  max-width: 100%;
-  height: 100%;
-}
-
-.btnc1 {
-  background: none;
-  border: none;
-  color: black;
-  width: 80px;
-}
-
-.btnc1:hover {
-  color: white;
-}
-
-.container-fluid {
-  overflow: hidden; /* Ensure no overflow within the container */
-  padding: 0; /* Optional: remove any padding if needed */
-}
-
-#about {
-  background: black;
-  height: max-content;
-  padding-top: 1%;
-  padding-bottom: 12%;
-  color: white;
-}
-
-.aboutcol1 ul {
-  padding-left: 20px;
-}
-
-.aboutcol1 ul li {
-  list-style: none; /* Remove default bullet points */
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-#info {
-  height: max-content;
-  padding: 5%;
-
-}
-
-/* >>>>>>>>>>>>>>>>>>>>>>> */
-.infopage > .container {
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-.infopage .row {
-  display: flex;
-  overflow: visible;
-}
-
-.infopage .col-lg-6 {
-  padding: 20px;
-  overflow: hidden; /* Ensure no overflow within the column */
-}
-
-.infopage .col-lg-6 img {
-  transition: transform 0.5s ease-in-out; /* Smooth scaling */
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.infopage .accordion-button:hover {
-  background: #000;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  transition-duration: 1s ease-in;
-}
-
-.infopage .accordion-button:focus {
-  box-shadow: none;
-}
-
-/* Image enlargement when an accordion is opened */
-.infopage .col-lg-6 img.enlarged {
-  transform: scale(1.1); /* Image enlarges */
-  transition-duration:.7s ;
-}
-
-.accordion-collapse {
-  max-height: 0; /* Initially collapsed, height 0 */
-  overflow: hidden; 
-  background: #000;
-  color: pink;
-  transition: max-height 0.2s ease-in; /* Transition for smooth expansion/collapse */
-}
-
-.accordion-collapse.show {
-  max-height: 1000px; /* Large enough max-height to allow expansion (adjust as needed) */
-}
-
-.accordion-body {
-  opacity: 1; /* Keep content visible immediately */
-}
-
-/* Optional: Transition for the button */
-.infopage .accordion-button {
-  transition: transform 0.2s ease-in; /* Smooth transition for the button */
-  background: yellow;
-}
-
-
-
-
-
-
-@media(min-width: 1000px) {
-  .infopage .col-lg-6 img {
-    margin-left: 50px;
-  }
-}
-
-@media(max-width: 700px) {
-  #form {
-    padding-left: 12px;
-    padding-right: 12px;
+  /* Dropdown content */
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
   }
 
-  
+  /* Show on hover */
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Links inside dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .dropdown-content a:hover {
+    color: #00bfff;
+  }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   navbar done  */
+
+
+body{
+    padding: 0;
+    margin: 0;
 }
-
-#info {
-  height: max-content;
+#home2{
+   background: #3a9ec0;
+    padding: 0% 4rem;
+    margin-top: 0px;
+    padding-top: 160px;
+    padding-bottom: 60px;
 }
-
-#infoImage {
-  width: 300px;
-  height: 360px;
+#home2>.row>.col-lg-6>img{
+   
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
 }
-
-
-/* >>>>>>>>>>>>>>>>>>>>>>>>> */
-
-#progressloader {
-  background: brown;
-  height: max-content;
-  color: white;
-  padding-top: 5%;
-  padding-bottom: 5%;
+#home2>.row>.col-lg-6>h1>big{
+   
+    color: white;
+    font-weight: 900;
 }
-
-.progress-section {
-  margin-top: 100px;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease;
-  width: 90%;
+#home2>.row>.col-lg-6>h3{
+    max-width: 600px;
+    color: #bec4c9;
 }
-
-/* Individual progress bar container style */
-.progress-bar-container> .progress-bar {
-  height: 12px;
-  background-color: #ddd;
-  border-radius: 2px;
-  position: relative;
-  width: 0; /* Initially 0% width */
-  transition: width 1s ease;
-  font-size:8px;
-  padding: 1%;
+#home2>.row>.col-lg-6>.d-flex>button>i{
+    font-size: 30px;
+   margin-right: 10px;
+   transform: translateY(2px);
 }
-
-/* Specific styles for each progress bar */
-.progress-section > .progress-bar-container > .html-progress {
-  background-color: #4CAF50;
+#home2>.row>.col-lg-6>.d-flex>.btn-primary{
+    background:#00bfff;
+    border: none;
 }
-
-.progress-section > .progress-bar-container > .css-progress {
-  background-color: #FF9800;
+#home2>.row>.col-lg-6>.d-flex>.btn-primary:hover{
+    background: #3a9ec0;
+    transition: 0.3s ease-in-out;
 }
-
-.progress-section > .progress-bar-container > .js-progress {
-  background-color: #2196F3;
+#smallaction{
+    background:#00bfff;
+    border: none;
 }
-
-/* Style for text inside progress bars */
-.progress-bar > .progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+#smallaction:hover{
+    background: #3a9ec0;
+    transition: 0.3s ease-in-out;
 }
-
-/* Animation for progress section */
-.progress-section.animate {
-  opacity: 1;
-}
-
-#progressimg {
-  height: 90%;
-  width: 90%;
-}
-@media(max-width:760px)
+@media(max-width:768px)
 {
-  #progressimg{
-   margin-left:-18px ;
-  }
-}
-#gsap {
-  height: max-content;
-  padding-bottom: 10px;
-}
-
-#gsap>.container>.row>.col-lg-3 {
-  margin: 1%;
-  height: 400px;
-}
-
-.gsapcontainer>.row>.col-lg-3 {
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Slight shadow */
-  max-width: 270px;
-  border: none;
-  padding: 3%;
-}
-/* <>>>>>>>>>>>>>>>>>>>>> */
-
-  #carousel{
-        background: rgb(113, 82, 113);
+    #bigbr{
+        display:none;
+    }
+    #home2{
+        padding:0% 2rem ;
+        padding-top: 50px;
+        padding-bottom: 50px;
        
-      }
-      
-      h2 {
-        font-size: 24px;
-        font-family: Arial, sans-serif;
-      }
-      
-      .owl-carousel .card {
-        background-color: #f4f4f4;
-        height: 300px;
-        padding: 10%;
-       
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        font-family: Arial, sans-serif;
-        transform: scale(0.9);
-      }
-      
-      .card h3 {
-        font-size: 20px;
-        color: #333;
-      }
-      
-      .card p {
-        font-size: 16px;
-        color: #555;
-      }
-      
-      .card:hover {
-        transform: scale(1);
-        transition: all 0.4s ease-in-out;
-        
-      }
-      
-
-
-
-
-  /* Custom navigation buttons inside the carousel */
-
-/* >>>>>>>>>>>>>>>>>>>>>>> */
-.user-info {
-  display: grid;
-  place-items: center;
+    }
+    #home2>.row>.col-lg-6>.d-flex>button{
+        margin-top: 10px;
+        font-size: small;
+        white-space: nowrap;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
 }
 
-.user-info> img {
-  margin: 4%;
-  border: 1px solid grey;
-}
 
-.user-info > .user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
 
-.user-info > .user-details {
-  display: flex;
-  flex-direction: column;
-}
 
-.user-info > .user-details h2 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.user-info > .user-details p {
-  margin: 0;
-  color: gray;
-  font-size: 14px;
-}
-
-.skills-list li {
-  font-size: 14px;
-  color: #333;
-  list-style-type: square; /* Square bullet points */
-}
-
-.skills-list li:not(:last-child) {
-  margin-bottom: 5px; /* Space between list items */
-}
-
-.cursor{
-  cursor: pointer;
-}
-
-#form>.container {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 4%;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.276);
-}
-#fadelr>.container-fluid>.fade-left{
-  background: white;
-  color: black;
-  padding: 2%;
-  margin: 3%;
-  border-radius: 12px;
-}
-#fadelr>.container-fluid>.fade-right{
-  background:yellow;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  padding: 2%;
-  margin: 3%;
-  border-radius: 12px;
-}
 #smallslide {
-  width: 80%;
-  justify-self:center ;
-  display:flex;
-  justify-content: center;
-}
-#smallslide .owl-carousel{
-  width: 80%;
-}
-/* Styles for .card inside #smallslide */
-#smallslide .owl-carousel .card {
-  background-color: #f4f4f4;
-  height: 70px;
-  padding: 1%;
-  border-radius: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: Arial, sans-serif;
-  transform: scale(0.9);
-  display: grid;
-  place-items: center;
-  font-family:fantasy;
+    width: 100%;
+    justify-self:center ;
+    display:flex;
+    justify-content: center;
+    background:white;
+  }
+  #smallslide .owl-carousel{
+    width: 100%;
+  }
+  /* Styles for .card inside #smallslide */
+  #smallslide .owl-carousel .card {
+    height: 60px;
+    padding: 0%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transform: scale(0.9);
+    display: grid;
+    place-items: center;
+    font-family:fantasy;
+    border: none;
+    
+  }
   
-}
+  #smallslide .owl-carousel .card>img{
+    max-height: 40px;
+    max-width: 80px;
+  }
+  
+  #smallslide .owl-carousel .card:hover {
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+  }
 
-#smallslide .owl-carousel .card h3 {
-  font-size: 20px;
-  color: #333;
-}
-
-#smallslide .owl-carousel .card p {
-  font-size: 16px;
-  color: #555;
-}
-
-#smallslide .owl-carousel .card:hover {
-  transform: scale(1);
-  transition: all 0.4s ease-in-out;
-}
-
-
-
-/* >.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ANIMATIONS>>>>>>>>>>>>>>>>>>>*/
-
-/* Number # 2 */
-
-
-/* General fade-up animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(150px); /* Start position (a bit further down) */
-  transition: opacity 0.5s ease, transform 1s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0); /* Final position */
-}
-
-/* General fade-down animation */
-.fade-down {
-  opacity: 0;
-  transform: translateY(-100px) scale(0.8); /* Start higher and smaller */
-  transition: opacity 1s ease, transform 0.5s ease;
-}
-
-.fade-down.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1); /* Final position and size */
-}
-
-/* Fade-up slow animation */
-.fade-up-slow {
-  opacity: 0;
-  transform: translateY(150px); /* Start position (below) */
-  transition: opacity 1s ease 0.3s, transform 2s ease 0.3s; /* 1 second duration with 0.3s delay */
-}
-
-.fade-up-slow.visible {
-  opacity: 1;
-  transform: translateY(0); /* Final position */
-}
-@media(max-width:900px)
-{
-  /* Fade-left animation */
-.fade-left {
-  opacity: 0;
-  transform: translateX(-200px); /* Start position (left) */
-  transition: opacity 2s ease 0.4s, transform 2s ease 0.4s;
-}
-
-.fade-left.visible {
-  opacity: 1;
-  transform: translateX(0); /* Final position */
-}
-
-/* Fade-right animation */
-.fade-right {
-  opacity: 0;
-  transform: translateX(200px); /* Start position (right) */
-  transition: opacity 2.5s ease 0.4s, transform 2.5s ease 0.4s;
-}
-
-.fade-right.visible {
-  opacity: 1;
-  transform: translateX(0); /* Final position */
-}
-
-}
-
-/* Fade-left animation */
-.fade-left {
-  opacity: 0;
-  transform: translateX(-200px); /* Start position (left) */
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-left.visible {
-  opacity: 1;
-  transform: translateX(0); /* Final position */
-}
-
-/* Fade-right animation */
-.fade-right {
-  opacity: 0;
-  transform: translateX(200px); /* Start position (right) */
-  transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
-}
-
-.fade-right.visible {
-  opacity: 1;
-  transform: translateX(0); /* Final position */
-}
-
-/* Fade-up 1 (faster) */
-.fade-up-1 {
-  opacity: 0;
-  transform: translateY(10px); /* Slight start position */
-  transition: opacity 1s ease, transform 1s ease;
-  transition-delay: 0s; /* Start immediately */
-}
-
-.fade-up-1.visible {
-  opacity: 1;
-  transform: translateY(0); /* Final position */
-}
-
-.fade-up-2 {
-  opacity: 0;
-  transform: translateY(60px); /* Lower start position */
-  transition: opacity 1s ease, transform 1s ease;
-  transition-delay: 0.3s; /* Delayed by 0.3s */
-}
-
-.fade-up-2.visible {
-  opacity: 1;
-  transform: translateY(0); /* Final position */
-}
-
-.fade-up-3 {
-  opacity: 0;
-  transform: translateY(90px); /* Much lower start position */
-  transition: opacity 1s ease, transform 1s ease;
-  transition-delay: 0.6s; /* Delayed by 0.6s */
-}
-
-.fade-up-3.visible {
-  opacity: 1;
-  transform: translateY(0); /* Final position */
-}
+  

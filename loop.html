@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill Carousel</title>
+  
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    #smallslide {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .owl-carousel .card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .owl-carousel .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div id="smallslide">
+  <div class="owl-carousel">
+    <div class="card"><h3>HTML</h3></div>
+    <div class="card"><h3>CSS</h3></div>
+    <div class="card"><h3>JavaScript</h3></div>
+    <div class="card"><h3>MySQL</h3></div>
+    <div class="card"><h3>PHP</h3></div>
+    <div class="card"><h3>GSAP</h3></div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Carousel Init -->
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      items: 6,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 4 }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
