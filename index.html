@@ -3,208 +3,2372 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammed Shahwaiz - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6EVg+U9NKj7WxOZCkYO7sJG9QGULs4yEKs9InXrN9L/1AdB0P4B5HtyhO9W7z1+T1B2zOZ2W9Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Noon</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f7f9fc;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .resume {
-      width: 210mm;
-      min-height: 297mm;
-      margin: auto;
-      background: #fff;
-      padding: 40px 50px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #ff6600;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #ff6600;
-      flex-shrink: 0;
-    }
-
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .header-text {
-      flex: 1;
-      margin-left: 30px;
-    }
-
-    .header-text h1 {
-      font-size: 2.2rem;
-      color: #ff6600;
-    }
-
-    .header-text p {
-      margin: 6px 0;
-      font-size: 1rem;
-    }
-
-    .header-text i {
-      color: #ff6600;
-      margin-right: 8px;
-    }
-
-    .section {
-      margin-bottom: 25px;
-    }
-
-    .section h2 {
-      font-size: 1.4rem;
-      color: #ff6600;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-
-    .section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .section ul li {
-      margin-bottom: 8px;
-      padding-left: 15px;
-      position: relative;
-    }
-
-    .section ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #ff6600;
-    }
-
-    a {
-      color: #ff6600;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media print {
-      body {
-        background: none;
-      }
-
-      .resume {
-        box-shadow: none;
-        width: auto;
-        min-height: auto;
-        padding: 0;
-        margin: 0;
-      }
-
-      a {
-        color: black;
-        text-decoration: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .header-text {
-        margin-left: 0;
-        margin-top: 20px;
-      }
-    }
-
-    .header-text i,
-    .section i,
-    i {
-      color: #ff6600;
-      margin-right: 8px;
-    }
-
-  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/> -->
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css"/>
+
 </head>
 <body>
-
-  <div class="resume">
-    <div class="header">
-      <div class="profile-pic">
-        <img src="nobg.jpg" alt="Muhammed Shahwaiz" />
-      </div>
-      <div class="header-text">
-        <h1>Muhammed Shahwaiz</h1>
-        <p>Frontend & Backend Web Developer</p>
-        <p><i class="fas fa-phone"></i> +92 3134574191</p>
-        <p><i class="fas fa-envelope" ></i> shahwaiztiger12@gmail.com</p>
-        <p><i class="fab fa-linkedin"></i> 
-          <a href="https://www.linkedin.com/in/muhammed-shahwaiz-62952b35a/" target="_blank">
-            linkedin.com/in/muhammed-shahwaiz
-          </a>
-        </p>
-      </div>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://f.nooncdn.com/s/app/com/noon/design-system/logos/noon-logo-en.svg" alt="Noon Logo" class="logo" />
+    
     </div>
-
-    <div class="section">
-      <h2>Summary</h2>
-      <p>Self-taught web developer passionate about building responsive, user-friendly websites. Experienced in HTML, CSS, JavaScript, PHP, MySQL, and modern frameworks like Bootstrap and Tailwind CSS.</p>
+    <a href="#" class="map" id="mapBtn"><img src="img/map.jpg" alt=""></a>
+    <div class="navbar-center">
+      <input type="text" placeholder="What are you looking for?" class="search-bar" />
     </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5, CSS3, Bootstrap, Tailwind CSS</li>
-        <li>JavaScript, GSAP (GreenSock)</li>
-        <li>PHP & MySQL (Backend Development)</li>
-        <li>Responsive Design & Web Animation</li>
-        <li>CRUD Applications & Form Handling</li>
-      </ul>
+    <div class="navbar-right">
+      
+        <a href="#" class="nav-link">العربية</a>
+      <a href="#" class="nav-link nav-linkcen">&nbsp;&nbsp;Login <i class="fa-regular fa-circle-user"></i>&nbsp;&nbsp;</a>
+      <a href="#" class="nav-link navlinkheart"><i class="fa-regular fa-heart"></i></a>
+      <a href="#" class="nav-link">🛒</a>
     </div>
+  </nav>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Mobile Responsive Site:</strong> Built using HTML, CSS, JS with responsive layouts and smooth animations.</li>
-        <li><strong>Student Portal (CRUD):</strong> Full PHP + MySQL project to manage student data (Create, Read, Update, Delete).</li>
-        <li><strong>Restaurant Delivery Website:</strong> Online delivery platform with order system built in PHP.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>F.Sc. (Pre-Medical)</strong><br>Punjab College, Faisalabad — 2024</p>
+  <div id="mapModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18..." 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </div>
+
+  <!-- Mobile Screen Items >>>>>>>>>>>>>>>>>>>>>>>>-->
+
+  <a href="#" class="map maptel" id="mapBtn">&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Deliver to Dubai</a>
+
+
+  <!-- >>>>>>>>>>>>>>>>>>>>>>>>>. -->
+
+ <section id="flex">
+  <div class="carousel-wrapper no-bootstrap">
+    <div class="arrow" id="left-arrow">&#x25C0;</div>
+  
+    <div class="carousel" id="carousel">
+      <div class="category">Electronics</div>
+      <div class="category">Men's Fashion</div>
+      <div class="category">Women's Fashion</div>
+      <div class="category">Kids' Fashion</div>
+      <div class="category">Home & Kitchen</div>
+      <div class="category">Beauty & Fragrance</div>
+      <div class="category">Baby</div>
+      <div class="category">Toys</div>
+      <div class="category">Sports</div>
+      <div class="category">Automotive</div>
+      <div class="category">Books</div>
+    </div>
+  
+    <div class="arrow" id="right-arrow">&#x25B6;</div>
+  </div>
+  
+  <a href="https://example.com" class="animated-button no-bootstrap">
+    <img src="img/button1img.jpg" alt="" style="height: 20px;">
+    <span id="changing-text" class="animated-text"><p style="color: red;">Try Free</p></span>
+    <img src="img/button2img.jpg" alt="icon" class="animated-img">
+  </a>
+</section>
+
+
+<section id="sec2">
+ <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/37298fc1-69ca-4033-a437-022ac938a465.gif" alt=""></a> 
+</section>
+
+<!-- >Mobile screen items -->
+ 
+<div class="mobiswipe">
+  <div class="slider" data-slider>
+    <div class="slider-track" id="sliderTrack">
+      <img src="https://f.nooncdn.com/ads/banner-1008x1008/en_dk_uae-hero-01-HP%20(10).1746012560.7475195.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0002/assets/09f472dc-bcba-4f7f-bd9c-e6fe82ae99cd.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/277b512c-9638-4e91-87db-ca9ea3470c0c.gif" alt="">
+      <img src="https://f.nooncdn.com/ads/banner-1008x1008/en_dk_uae-hero-01-hp%20(3).1746127448.249712.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/bb4beb98-9e1a-432a-8725-f74ed858338a.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/3aaaaa31-da74-48d2-adbf-460be704a7b2.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/8cad2fba-c44b-49a3-adc0-e24eb31814fa.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9d4e11dc-abc1-459a-b986-16359ec7465a.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cce3a705-05ab-4014-93b6-7c1f6cce81be.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/58587b7e-599b-4198-8a7c-5afb14df0441.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c4b7d42f-7749-46e2-aa3e-6d97b3607f1d.gif" alt="">
+    </div>
+  
+    <div class="controls">
+      <button class="prev"><</button>
+      <button class="next">></button>
+    </div>
+  <div class="pagination" style="display: none;"></div>
+  </div>
+  </div>
+  
+<!-- >>>>>>>>>>>>>>>> -->
+
+
+<section id="sec3">
+  <div class="slider" data-slider>
+    <div class="slider-track" id="sliderTrack">
+      <img src="https://f.nooncdn.com/ads/banner-1008x1008/en_dk_uae-hero-01-HP%20(10).1746012560.7475195.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0002/assets/09f472dc-bcba-4f7f-bd9c-e6fe82ae99cd.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/277b512c-9638-4e91-87db-ca9ea3470c0c.gif" alt="">
+      <img src="https://f.nooncdn.com/ads/banner-1008x1008/en_dk_uae-hero-01-hp%20(3).1746127448.249712.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/bb4beb98-9e1a-432a-8725-f74ed858338a.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/3aaaaa31-da74-48d2-adbf-460be704a7b2.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/8cad2fba-c44b-49a3-adc0-e24eb31814fa.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9d4e11dc-abc1-459a-b986-16359ec7465a.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cce3a705-05ab-4014-93b6-7c1f6cce81be.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/58587b7e-599b-4198-8a7c-5afb14df0441.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c4b7d42f-7749-46e2-aa3e-6d97b3607f1d.gif" alt="">
+    </div>
+  
+    <div class="controls">
+      <button class="prev"><</button>
+      <button class="next">></button>
+    </div>
+  
+    <div class="pagination"></div>
+  </div>
+  
+   <div class="fashion">
+    <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/7bd78181-a7f7-4b05-b73d-95db8b17c2bd.png" alt=""></a>
+    <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/3af29c4e-f1bc-4841-a64f-cddb1fdc42c1.png" alt="" href="#"></a>
+   </div>
+  
+</section>
+
+<div id="sec4">
+
+  <div class="swiper myswiper1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/2c214568-714f-42d1-a2f3-5b0eb0db4ee3.png" alt=""></a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/204c7f4d-b499-44c5-8eb2-f65d666476b8.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d99a04f4-9768-4ab7-b775-43e5c4774aa7.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/847b5d51-cbc0-4f98-b82d-5a480f189c62.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/0aa356f7-2140-467b-bf24-b5c3d8a2da91.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/8c9e45db-eb42-4ae1-902a-473adcb15d94.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/bfab95b5-aec9-443a-9376-f1dd8490ca11.png" alt="">
+      </a>
+      </div>
+  <!--  -->
+  <div class="swiper-slide">
+    <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/8bc455a3-78fd-4f70-9d57-536ce256a830.png" alt=""></a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/867424ed-9a61-4038-9a73-7a7adde57647.png" alt="">
+    </a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/bbdc4e6a-30c7-4597-85bb-2ef5529c5c29.png" alt="">
+    </a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/847b5d51-cbc0-4f98-b82d-5a480f189c62.png" alt="">
+    </a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/0aa356f7-2140-467b-bf24-b5c3d8a2da91.png" alt="">
+    </a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/691bace4-850a-4e5e-9a25-38dab9c1f7d8.png" alt="">
+    </a>
+    <a href="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/750ccb98-f8c8-4b6f-9ffe-3389ec2e711f.png" alt="">
+    </a>
+    </div>
+    <!-- >>>>>>>>>>>> -->
+    <div class="swiper-slide">
+      <a href=""><img src="https://f.nooncdn.com/mpcms/EN0001/assets/813a2a4b-3217-47bf-81e7-40745135272e.png" alt=""></a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/8d122f39-f087-420d-98b6-5b32f3f6604c.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/b7a1c2e4-dca3-45c4-a8c0-e7e7410550b2.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/ba57aa09-cda3-4db2-9539-458ff0676170.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/11597027-419b-43a1-8744-ff7f60cef724.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d3081ba2-a4b7-4ad9-897c-37a735ebb6e5.png" alt="">
+      </a>
+      <a href="">
+        <img src="https://f.nooncdn.com/mpcms/EN0001/assets/036ce059-4dc9-4680-aba5-f2887d6e80b9.png" alt="">
+      </a>
+      </div>
+
+      <div class="swiper-slide">
+       
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/1b98ffbb-c05b-42e9-850e-1863347f8409.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/4098c587-6244-4f1e-bd07-a12d465c0918.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/263055fc-a431-411c-b264-72102c784dd2.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9e5be9b4-3fe5-4a2b-b14b-2e2448f15cc3.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/668bc6fc-d8d7-4473-8bce-a405b1c51c33.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/ff5da9a8-aab8-49f5-b064-073740a5bdc0.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/15dc5fcb-9eec-44a0-aaca-e630ec1f56d0.png" alt="">
+        </a>
+      </div>
+
+
+      <div class="swiper-slide" >
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/5b096b4a-56ee-4b7c-8d53-cd2d46061248.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/47c5cbf7-c379-4ff4-b5df-3cfb2459acc7.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/93214a62-deef-4606-813a-867c6692f8f5.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f2dc3deb-53a3-4f11-b37e-570fc1972dfd.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/df1ab5f0-900f-493b-867d-6055ddd9817a.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/955b27c0-7778-4345-b6ed-81368825223e.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/6a45e363-9bd5-4c21-b9c2-981bf795f939.png" alt="">
+        </a>
+      </div>
+     
+      <!-- <div class="swiper-slide">Slide 4</div> -->
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- Optional navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next "></div>
+    <div class="swiper-scrollbar"></div>
+
+  </div>
+</div>
+
+
+<div id="sec5">
+  <section>
+    <h2>More reasons to shop</h2>
+    <div>
+     <a href=""> <img src="https://f.nooncdn.com/mpcms/EN0001/assets/2f48e1e6-2f31-40bb-a672-7b6ee215c60a.png" alt=""></a>
+     <a href=""> <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cab343fc-0cf6-412c-9444-2d28bded9534.png" alt=""></a>
+    </div>
+<div>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/70447c4d-be10-4017-b044-3a67c8652f5f.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/2c9c92a4-a051-474d-952d-c58140fd48c0.png" alt="">
+  </a>
+</div>
+    
+  </section>
+  <!--  -->
+  <section id="sec6">
+    <div class="top-bar">
+      <h2>Mega deals</h2>
+      <div class="countdown-timer" id="countdown"> <i class="fa-solid fa-clock"></i></div>
+    
+      <button class="all-deals-btn">ALL DEALS</button>
+    </div>
+  
+    <div class="grid">
+      <!-- Card 1 -->
+       <div>
+      <div class="card">
+        <div class="label">Mobile Phones deals</div>
+        <img src="https://f.nooncdn.com/p/pnsku/N53432666A/45/_/1694762132/4b3a85fa-6f26-4daa-a141-4d0cd1c2b6af.jpg?width=240" alt="iPhone 15">
+        <div class="title">Apple iPhone 15 Physical Dual Sim 128GB Black 5G...</div>
+        <div class="price"><span class="old-price">3399</span> Ð 2529</div>
+        <div class="cart-icon">🛒</div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="label">Televisions deals</div>
+        <img src="https://f.nooncdn.com/p/pnsku/N70107499V/45/_/1739950035/2171f7fc-9a2c-448e-b5c7-a239a8caf553.jpg?width=240" alt="Samsung TV">
+        <div class="title">Samsung 75-Inch Crystal UHD DU7000 4K Tizen OS...</div>
+        <div class="price"><span class="old-price">2779</span> Ð 2659</div>
+        <div class="cart-icon">🛒</div>
+      </div>
+      </div>
+  <div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="label">Watches & Accessorie...</div>
+        <img src="https://f.nooncdn.com/p/v1675762173/N36039752A_1.jpg?width=240" alt="Tommy Watch">
+        <div class="title">TOMMY HILFIGER Men's Kane Water Resistant...</div>
+        <div class="price"><span class="old-price">815</span> Ð 280</div>
+        <div class="cart-icon">🛒</div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="label">Wearables deals</div>
+        <img src="https://f.nooncdn.com/p/pnsku/N70108564V/45/_/1725953605/8e01906f-f0d4-450b-958a-f42bd93014b1.jpg?width=240" alt="Apple Watch">
+        <div class="title">Apple Watch Series 10 GPS 46mm Rose Gold...</div>
+        <div class="price"><span class="old-price">1459</span> Ð 1239</div>
+        <div class="cart-icon">🛒</div>
+      </div>
+
+      </div>
+    </div>
+  
+  
+  </section>
+
+  <!--  -->
+
+  <section>
+    <h2>More Info</h2>
+    <div>
+     <a href=""> <img src='https://f.nooncdn.com/mpcms/EN0001/assets/1e8be764-78fe-4ac5-9417-25feb0357da3.png' alt=""></a>
+  
+    </div>
+<div>
+  <a href="">
+    <img src="https://f.nooncdn.com/ads/banner-410x410/Braun-Health-Care-Banner-Desktop-410-x-195-EN.1746020460.3396485.png" alt="">
+  </a>
+
+</div>
+    
+  </section>
+
+</div>
+
+<div class="sec6">
+  <div><img src="https://f.nooncdn.com/ads/banner-1440x1440/en_dk_uae-sfu-01%20(21).1746004486.603638.png" alt=""></div>
+</div>
+
+
+<div class="sec7">
+  <br>
+ <h2>&nbsp;&nbsp;Maximize Your Savings</h2>
+    <!-- Swiper -->
+    <div class="swiper mySlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+       
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/7a5abf19-56fe-4cad-a44c-5c76a6ee3f69.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/426c11ff-5142-4df3-861c-a33d0b4fdec9.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/6aecface-9c12-4a30-bd5a-cabff427ad0f.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/2a81862b-77c6-4ab0-99ea-ebaaf31dd23f.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+       
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/331f6a4a-76cd-4061-b3d8-1067acd57870.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/218f7fb7-354e-4121-88c7-86c50abe9700.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/05972a9c-e59c-4396-a42e-e32d5acf2b20.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/11c63b5c-1965-48e3-a6ea-0e142f22de89.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/168f247d-208a-42f5-af2a-56c5bee9879d.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/95a48eb0-5351-4f63-80b5-164f6346c598.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f823ca43-96d3-47c4-8ab2-bf171be823fa.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/1c8641a1-f27e-436f-a178-4edf22e9b652.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+         
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d542adac-ff1e-4174-a45b-3bc88d31a79b.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cb31a04f-f95f-421b-8c88-02a488b40423.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/807df5f4-c174-4e72-b83a-9fac1de6d0ed.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d306bcd1-0ec7-4d98-b8c1-fc1402478f49.png" alt="">
+          </a>
+       
+
+        </div>
+        <div class="swiper-slide">
+          
+          <a href=''>
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/443649c6-cf72-44a1-8952-7bfa371015d0.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c1425dce-dfa8-4323-98d3-893598031c0b.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/786a277d-289e-44e2-8fc4-c94291d52395.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c24990e2-5100-46a9-9b95-261592833f3d.png" alt="">
+          </a>
+
+        </div>
+        <div class="swiper-slide">
+          
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f47abb8d-b3cd-46b9-9c31-48980fd61bb6.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/85ea474f-4777-4107-8d89-cf1c38d96e8a.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/672c1bd6-b81b-432e-8efd-9661a9ef6cc8.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/0df2a93b-bcd4-45d5-8570-e4fc0b3b81fd.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+         
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/26820e9f-a070-4b38-b3a3-2d4815b5fe50.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/2f60b4d6-62da-4a1a-a3b8-1101d7a2166a.png" alt="">
+          </a>
+          <a href="">
+              <img src="https://f.nooncdn.com/mpcms/EN0001/assets/feb71588-635a-4c82-9de6-bd6398285842.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/4c75413f-76e8-4fb8-be57-a7c4e6d65382.png" alt="">
+          </a>
+        </div> 
+        <div class="swiper-slide">
+          
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/3515b0b5-63af-463f-b10e-b9ec99266cec.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9f9f25ce-e09f-4320-b156-99c588861b29.png" alt="">
+          </a>
+          <a href="">
+           <img src="https://f.nooncdn.com/mpcms/EN0001/assets/8526d380-80d6-412f-a1da-2659db15f36d.png" alt=""> 
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/75a08412-2ef5-4b17-aa93-fd5a7d9d19fa.png" alt="">
+          </a>
+        </div> 
+      </div>
+  
+      <!-- Controls -->
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+</div>
+<hr>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+<section id="section8">
+<div class="head">
+  <h2>Summer Essentials</h2>
+  <a href="">
+    View All
+  </a>
+</div>
+  <div class="swiper mySlider">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">  
+          <div></div>   
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f3c79c18-c548-44ed-b441-e2ad7aabbc08.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a1c3017c-c429-4efb-b102-4817e51fb1fc.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/312ba9b3-f8e7-42a3-abaf-997db9994212.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/628ea53b-23d4-42a6-ae23-83e2a37731d9.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/7fa673f0-b317-4729-971b-1b41e66372a7.png" alt="">
+        </a>
+        </div>
+        <!--  -->
+        <div class="swiper-slide">
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a025985c-845a-48f6-b850-80c0ab9058c7.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/16d471dc-029b-4367-af55-9d819f522136.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9de90aad-086e-4ee6-9b35-8fcf54962ca3.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9a3c06bb-3d5e-4344-b874-0b8b5563a388.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f8d9b74c-e3b3-4d60-88d4-c158843f0901.png" alt="">
+        </a>
+        </div>
+
+        <!--  -->
+        <div class="swiper-slide">
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d2378011-fbc4-4085-81e6-f06938c6142b.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/874e7dfd-7357-4fe6-97c5-b7ab7e2c0a0d.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/ad875d19-1c3c-43ae-a8a2-f5b15e2a0b42.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/81887cf4-ae1d-4c42-97e3-bb482f50ec01.png" alt="">
+        </a>
+        <a href="">
+          <img src="https://f.nooncdn.com/mpcms/EN0001/assets/757765f8-d85a-412e-94bc-ec26802a5481.png" alt="">
+        </a>
+        </div>
+
+      </div>
+     
+
+    <!-- Controls -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<!--  -->
+
+<div id="section10">
+  <div class="swiper swipe4">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">  
+          
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 4 left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 3 Left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Limited Edition!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+      </div>
+     
+
+    <!-- Controls -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+ 
+</div>
+<!--  -->
+<div id="section10">
+  <div class="swiper swipe4">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">  
+          
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 4 left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 3 Left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Limited Edition!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+      </div>
+     
+
+    <!-- Controls -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+ 
+</div>
+<!--  -->
+<div id="section10">
+  <div class="swiper swipe4">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">  
+          
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 4 left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 1 Remaining!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+        <!--  -->
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Only 3 Left in Stock!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Limited Edition!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb1.png" alt="" style="width: 160px;transform: translateY(10px);">
+
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+        <div class="swiper-slide">
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Buy Now!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+          <div id="smallitembox">
+            <button id="heart"><i class="fa-regular fa-heart"></i></button>
+            <div class="up">
+              <div class="slider smallslider" data-slider>
+                <div class="slider-track" id="sliderTrack">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+               <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+                <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+                </div>
+              
+                <div class="controls">
+                  <button class="prev">◀</button>
+                  <button class="next ">▶</button>
+                </div>
+              
+                <div class="pagination" ></div>
+              </div>
+              
+            </div>
+            <div class="down">
+              <div class="itemrow">
+                <p>4.3<i class="fa-solid fa-star"></i></p>
+          
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <p id="itemboxp">Deals</p>
+              <p id="itemboxp2"><small>Sponsored</small></p>
+              <p id="itemboxh5">
+                OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+              <div class="itemboxprice">
+               <h4> Ð 368.95</h4><p>383.80</p></div>
+               <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+               style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+              Selling Out Fast!
+            </p>
+            <img src="img/smallitemb2.png" alt="" style="width: 160px;transform: translateX(-6%);">
+              
+            </div>
+          </div> 
+          <!--  -->
+        </div>
+
+      </div>
+     
+
+    <!-- Controls -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+ 
+</div>
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<div id="section9">
+  <div class="slider" data-slider>
+    <div class="slider-track" id="sliderTrack">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d4bdaa5e-da05-4b12-96ad-9fb9e50e4e85.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cf7d9bd1-315d-4182-840c-5d3d00226e55.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d4bdaa5e-da05-4b12-96ad-9fb9e50e4e85.gif" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c6904c36-d3c5-47c9-b12f-515972b5324d.png" alt="">
+      
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c65a7c2c-22d0-46f1-b6c2-5f449b17786c.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/4b9decd2-43d8-45bb-b56f-726b790b863c.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/3aaaaa31-da74-48d2-adbf-460be704a7b2.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/be536352-19c9-4691-aa94-1bb60e206518.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9d4e11dc-abc1-459a-b986-16359ec7465a.png" alt="">
+      <img src="https://f.nooncdn.com/mpcms/EN0001/assets/cce3a705-05ab-4014-93b6-7c1f6cce81be.png" alt="">
+   
+    </div>
+  
+    <div class="controls">
+      <button class="prev">◀</button>
+      <button class="next">▶</button>
+    </div>
+  
+    <div class="pagination"></div>
+  </div>
+  
+</div>
+
+<!-- >>>>>>>>>>>>>>>>.>>>>>>>>>>>>>>>>>>>>>>>> -->
+ <div id="section11head">
+  <h2>Health Sale | 06 - 08 May</h2> <button>View All</button>
+ </div>
+<div id="section11">
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/71c9af17-bcc8-4435-ab46-0d767c48fb46.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f995e19a-8784-4b94-96e4-92510abae19f.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/5733f23c-11cc-4d75-bf0d-1c982396e512.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/82ed3aff-7d37-4cc9-a41c-814f446593a1.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/e46fbc79-b15f-4b6a-9702-b73452a92c85.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c8603327-d9ad-4cc2-b7b7-f7da3cf5ee6c.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a061215f-1e3f-4be8-ab1a-46d612ad6467.png" alt="">
+  </a>
+</div>
+<!--  -->
+<div id="section11head">
+  <h2>Health Sale | 06 - 08 May</h2> <button>View All</button>
+ </div>
+<div id="section11">
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/71c9af17-bcc8-4435-ab46-0d767c48fb46.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f995e19a-8784-4b94-96e4-92510abae19f.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/5733f23c-11cc-4d75-bf0d-1c982396e512.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/82ed3aff-7d37-4cc9-a41c-814f446593a1.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/e46fbc79-b15f-4b6a-9702-b73452a92c85.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c8603327-d9ad-4cc2-b7b7-f7da3cf5ee6c.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a061215f-1e3f-4be8-ab1a-46d612ad6467.png" alt="">
+  </a>
+</div>
+<!--  -->
+<div id="section11head">
+  <h2>Health Sale | 06 - 08 May</h2> <button>View All</button>
+ </div>
+<div id="section11">
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/71c9af17-bcc8-4435-ab46-0d767c48fb46.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f995e19a-8784-4b94-96e4-92510abae19f.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/5733f23c-11cc-4d75-bf0d-1c982396e512.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/82ed3aff-7d37-4cc9-a41c-814f446593a1.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/e46fbc79-b15f-4b6a-9702-b73452a92c85.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c8603327-d9ad-4cc2-b7b7-f7da3cf5ee6c.png" alt="">
+  </a>
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a061215f-1e3f-4be8-ab1a-46d612ad6467.png" alt="">
+  </a>
+</div>
+<!--  -->
+
+<div id="foot1">
+  <a href="">
+    <img src="https://f.nooncdn.com/mpcms/EN0001/assets/c1073d7b-2c8b-49aa-a551-d065094cbeb8.png" alt="">
+  </a>
+</div>
+
+<!--  -->
+<div id="foot2">
+  <h3>Superior online shopping in the UAE</h3><br>
+  <p>
+    As the leading destination for online shopping in the UAE, noon has everything you need under one roof. Whether you’re shopping for the latest <a href="">electronic products</a>, fashion, homeware, <a href="">products for kids and babies</a>, books and stationery, sports and health essentials, <a href="">beauty products</a>, or groceries, we have millions of products in the noon UAE store. As a customer-centric online store, we make it easier to buy online with flexible payment plans that help you save, along with regular sales across our extensive product range, gift cards, wishlists, our <a href="">
+      exclusive Mashreq VIP card
+    </a>, our easy-to-use
+  </p><br>
+  <h4><a href="">Read More</a></h4>
+
+  <BR></BR>
+
+  <h3>Superior online shopping in the UAE</h3><br>
+  <p>
+    As the leading destination for online shopping in the UAE, noon has everything you need under one roof. Whether you’re shopping for the latest <a href="">electronic products</a>, fashion, homeware, <a href="">products for kids and babies</a>, books and stationery, sports and health essentials, <a href="">beauty products</a>, or groceries, we have millions of products in the noon UAE store. As a customer-centric online store, we make it easier to buy online with flexible payment plans that help you save, along with regular sales across our extensive product range, gift cards, wishlists, our <a href="">
+      exclusive Mashreq VIP card
+    </a>, our easy-to-use
+  </p><br>
+  <h4><a href="">Read More</a></h4>
+
+  <BR></BR>
+
+  <h3>Superior online shopping in the UAE</h3><br>
+  <p>
+    As the leading destination for online shopping in the UAE, noon has everything you need under one roof. Whether you’re shopping for the latest <a href="">electronic products</a>, fashion, homeware, <a href="">products for kids and babies</a>, books and stationery, sports and health essentials, <a href="">beauty products</a>, or groceries, we have millions of products in the noon UAE store. As a customer-centric online store, we make it easier to buy online with flexible payment plans that help you save, along with regular sales across our extensive product range, gift cards, wishlists, our <a href="">
+      exclusive Mashreq VIP card
+    </a>, our easy-to-use
+  </p><br>
+  <h4><a href="">Read More</a></h4>
+</div>
+<!--  -->
+<div id="foot3head">
+  <div  style="display: grid;gap: 0px;">
+    <h3>We're Always Here To Help
+
+      </h3>
+      <p>Reach out to us through any of these support channels</p>
+  </div>
+  <!--  -->
+  <div>
+ <a href="">
+  <div style="gap: 5px;">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <div style="display: grid;gap: 0px;">
+      <span>HELP CENTER</span>
+    <h2>help.noon.com
+    </h2>
+    </div>
+
+  </div>
+ </a>
+<a href="">
+  <div style="gap: 5px;">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <div style="display: grid;gap: 0px;">
+      <span>HELP CENTER</span>
+    <h2>help.noon.com
+    </h2>
+    </div>
+
+  </div>
+</a>
+
+
+  </div>
+</div>
+<!-- >>>>>>>>>>>>>>>>>. -->
+
+<div id="foot4">
+  <div>
+    <h4>electronics</h4>
+    <a href="">
+      mobiles
+    </a>
+    <a href="">
+      Tablets
+    </a>
+    <a href="">
+      laptops
+    </a>
+    <a href="">
+      home appliances
+    </a>
+    <a href="">
+      camera, photo & video
+    </a>
+    <a href="">
+      televisions
+    </a>
+    <a href="">
+      headphones
+    </a>
+    <a href="">
+      video games
+    </a>
+  </div>
+  <!--  -->
+  <div>
+    <h4>electronics</h4>
+    <a href="">
+      mobiles
+    </a>
+    <a href="">
+      Tablets
+    </a>
+    <a href="">
+      laptops
+    </a>
+    <a href="">
+      home appliances
+    </a>
+    <a href="">
+      camera, photo & video
+    </a>
+    <a href="">
+      televisions
+    </a>
+    <a href="">
+      headphones
+    </a>
+    <a href="">
+      video games
+    </a>
+  </div>
+  <!--  -->
+  <div>
+    <h4>electronics</h4>
+    <a href="">
+      mobiles
+    </a>
+    <a href="">
+      Tablets
+    </a>
+    <a href="">
+      laptops
+    </a>
+    <a href="">
+      home appliances
+    </a>
+    <a href="">
+      camera, photo & video
+    </a>
+    <a href="">
+      televisions
+    </a>
+    <a href="">
+      headphones
+    </a>
+    <a href="">
+      video games
+    </a>
+  </div>
+  <!--  -->
+  <div>
+    <h4>electronics</h4>
+    <a href="">
+      mobiles
+    </a>
+    <a href="">
+      Tablets
+    </a>
+    <a href="">
+      laptops
+    </a>
+    <a href="">
+      home appliances
+    </a>
+    <a href="">
+      camera, photo & video
+    </a>
+    <a href="">
+      televisions
+    </a>
+    <a href="">
+      headphones
+    </a>
+    <a href="">
+      video games
+    </a>
+  </div>
+</div>
+
+<!--  -->
+<div id="foot5">
+  <div class="foot5in">
+    <h4>Shop On The Go</h4>
+    <div>
+      <a href=""><img src="https://f.nooncdn.com/s/app/com/common/images/logos/app-store.svg" alt=""></a>
+      <a href=""><img src="https://f.nooncdn.com/s/app/com/common/images/logos/google-play.svg" alt=""></a>
+      <a href=""><img src="https://f.nooncdn.com/s/app/com/noon/images/Huawei-icon.png" alt=""></a>
+    </div>
+    </div>
+
+    <div class="foot5in foot5in2">
+      <h4>Connect With Us</h4>
+      <div>
+      <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+    </div>
+
+   
+</div>
+<!-- ????????????? -->
+
+
+<div id="lastfoot">
+  <div class="hidd">
+    <img src="img/customer.png" alt="">
+  </div>
+  <div id="lastfootin">
+  <a href="">© 2025 noon. All Rights Reserved</a>  
+  <div>
+    <a href="">Careers</a>
+    <a href="">Warranty Policy</a>
+    <a href="">Sell with us</a>
+    <a href="">Terms of Use</a>
+    <a href="">Terms of Sale</a>
+    <a href="">Privacy Policy</a>
+    <a href="" id="customright">Consumer Rights</a>
+  
+  </div>
+  </div>
+  <div id="lastfootin">
+    <img src="img/cash.png" alt="">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!--  -->
+<!-- <div id="smallitembox">
+  <button id="heart"><i class="fa-regular fa-heart"></i></button>
+  <div class="up">
+    <div class="slider smallslider" data-slider>
+      <div class="slider-track" id="sliderTrack">
+     <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231469/81c5effb-b75c-4e2a-a2fb-86c84126ab6e.jpg?width=240" alt="">
+     <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231470/59daac10-2f26-4969-a214-05d50fc2c51b.jpg?width=240" alt="">
+      <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231471/e5912156-e991-49e0-9417-bc050f1a9bac.jpg?width=240" alt="">
+      <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231472/8aeac86b-6bf9-49a4-8948-98f08b1097b3.jpg?width=240" alt="">
+      <img src="https://f.nooncdn.com/p/pnsku/N70101906V/45/_/1724231483/b8682e4a-a6fe-44dd-8814-25db231d3c5b.jpg?width=240" alt="">
+      </div>
+    
+      <div class="controls">
+        <button class="prev">◀</button>
+        <button class="next ">▶</button>
+      </div>
+    
+      <div class="pagination" ></div>
+    </div>
+    
+  </div>
+  <div class="down">
+    <div class="itemrow">
+      <p>4.3<i class="fa-solid fa-star"></i></p>
+
+      <button><i class="fa-solid fa-cart-plus"></i></button>
+    </div>
+    <p id="itemboxp">Deals</p>
+    <p id="itemboxp2"><small>Sponsored</small></p>
+    <p id="itemboxh5">
+      OPPO A3x Dual SIM Ocean Blue 4GB RAM 128GB 4G - Middle East...</p>
+    <div class="itemboxprice">
+     <h4> Ð 368.95</h4><p>383.80</p></div>
+     <p class="fade-up-text" data-messages='["Free Delivery", "Selling Out Fast!"]'
+     style="display:inline-block; opacity:0; transform:translateY(10px); transition:opacity 0.5s ease, transform 0.5s ease;">
+    Selling Out Fast!
+  </p>
+    
+  </div>
+</div>  -->
+<!--  -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+
+
+<script  src="new.js">
+
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Sliders</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    .slider {
+      width: 300px;
+      overflow: hidden;
+      margin: 40px auto;
+      position: relative;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+      background: #eee;
+      font-size: 24px;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 1;
+      padding: 0 10px;
+    }
+
+    .controls button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .controls button:hover {
+      opacity: 1;
+    }
+
+    .pagination {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: gray;
+      border-radius: 50%;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slider 1 -->
+  <div class="slider" data-slider>
+    <div class="slider-track">
+      <div class="slide">Slider 1 - A</div>
+      <div class="slide">Slider 1 - B</div>
+      <div class="slide">Slider 1 - C</div>
+    </div>
+    <div class="controls">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+    <div class="pagination"></div>
+  </div>
+
+  <!-- Slider 2 -->
+  <div class="slider" data-slider>
+    <div class="slider-track">
+      <div class="slide">Slider 2 - A</div>
+      <div class="slide">Slider 2 - B</div>
+      <div class="slide">Slider 2 - C</div>
+    </div>
+    <div class="controls">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+    <div class="pagination"></div>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-slider]').forEach(initSlider);
+
+    function initSlider(slider) {
+      const track = slider.querySelector('.slider-track');
+      const slides = Array.from(track.children);
+      const pagination = slider.querySelector('.pagination');
+      const nextBtn = slider.querySelector('.next');
+      const prevBtn = slider.querySelector('.prev');
+
+      let currentIndex = 0;
+      let timer;
+
+      function goToSlide(i) {
+        const total = slides.length;
+        currentIndex = (i + total) % total;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updatePagination();
+      }
+
+      function updatePagination() {
+        Array.from(pagination.children).forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function buildPagination() {
+        pagination.innerHTML = '';
+        for (let i = 0; i < slides.length; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          dot.addEventListener('click', () => {
+            goToSlide(i);
+            resetTimer();
+          });
+          pagination.appendChild(dot);
+        }
+      }
+
+      function startAutoSlide() {
+        timer = setInterval(() => {
+          goToSlide(currentIndex + 1);
+        }, 3000);
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        startAutoSlide();
+      }
+
+      nextBtn?.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        resetTimer();
+      });
+
+      prevBtn?.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        resetTimer();
+      });
+
+      buildPagination();
+      goToSlide(0);
+      startAutoSlide();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Independent Text Animations</title>
+  <style>
+    .text-container {
+      height: 30px;
+      overflow: hidden;
+      position: relative;
+      font-size: 20px;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .text-slide {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      animation: slideUp 0.6s ease forwards;
+    }
+
+    @keyframes slideUp {
+      0% { top: 100%; opacity: 0; }
+      100% { top: 0; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="text-container" data-messages='["Hello", "Welcome", "Enjoy!"]' data-interval="3000">
+    <p class="text-slide">Hello</p>
+  </div>
+
+  <div class="text-container" data-messages='["Sale starts now", "50% off", "Limited time"]' data-interval="2000">
+    <p class="text-slide">Sale starts now</p>
+  </div>
+
+  <div class="text-container" data-messages='["Breaking News", "Update in 5 mins", "Stay Tuned"]' data-interval="4000">
+    <p class="text-slide">Breaking News</p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.text-container').forEach(container => {
+      const messages = JSON.parse(container.dataset.messages);
+      const interval = parseInt(container.dataset.interval, 10);
+      let currentIndex = 0;
+
+      let currentP = container.querySelector('p');
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % messages.length;
+
+        const newP = document.createElement('p');
+        newP.textContent = messages[currentIndex];
+        newP.className = 'text-slide';
+        container.appendChild(newP);
+
+        // Force browser to reflow to restart animation
+        void newP.offsetWidth;
+        newP.classList.add('text-slide');
+
+        // Remove the old paragraph after animation
+        if (currentP) {
+          currentP.classList.remove('text-slide');
+          setTimeout(() => {
+            if (currentP && currentP.parentElement) {
+              currentP.remove();
+            }
+          }, 600);
+        }
+
+        currentP = newP;
+      }, interval);
+    });
+  </script>
+
+</body>
+</html>

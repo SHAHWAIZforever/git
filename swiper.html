@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Test</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <style>
+    .swiper {
+      height: 180px;
+      padding: 20px;
+    }
+
+    .swiper-slide {
+      width: auto;
+    }
+
+    .swiper-slide img {
+      height: 140px;
+      margin: 0 5px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: rgb(255, 249, 249);
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      color: black !important;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px;
+      color: rgb(20, 10, 10);
+    }
+  </style>
+</head>
+<body>
+ 
+  <section id="section8">
+    <div class="swiper mySlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+       
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f3c79c18-c548-44ed-b441-e2ad7aabbc08.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a1c3017c-c429-4efb-b102-4817e51fb1fc.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/312ba9b3-f8e7-42a3-abaf-997db9994212.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/628ea53b-23d4-42a6-ae23-83e2a37731d9.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/7fa673f0-b317-4729-971b-1b41e66372a7.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+       
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/a025985c-845a-48f6-b850-80c0ab9058c7.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/16d471dc-029b-4367-af55-9d819f522136.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9de90aad-086e-4ee6-9b35-8fcf54962ca3.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/11c63b5c-1965-48e3-a6ea-0e142f22de89.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/9a3c06bb-3d5e-4344-b874-0b8b5563a388.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/168f247d-208a-42f5-af2a-56c5bee9879d.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/95a48eb0-5351-4f63-80b5-164f6346c598.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f823ca43-96d3-47c4-8ab2-bf171be823fa.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/1c8641a1-f27e-436f-a178-4edf22e9b652.png" alt="">
+          </a>
+        </div>
+        <div class="swiper-slide">
+         
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/f8d9b74c-e3b3-4d60-88d4-c158843f0901.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/e9380e8d-24ac-4b98-aaa5-984fc382cc55.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/807df5f4-c174-4e72-b83a-9fac1de6d0ed.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/d2378011-fbc4-4085-81e6-f06938c6142b.png" alt="">
+          </a>
+          <a href="">
+            <img src="https://f.nooncdn.com/mpcms/EN0001/assets/874e7dfd-7357-4fe6-97c5-b7ab7e2c0a0d.png" alt="">
+          </a>
+       
+  
+        </div>
+     
+      </div>
+  
+      <!-- Controls -->
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper1 = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+</body>
+</html>
