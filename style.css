@@ -1218,6 +1218,11 @@ background: rgba(128, 128, 128, 0.11);
     flex-wrap: wrap;
     justify-content: center;
     }
+    #foot4{
+      padding: 2% 3% !important;
+      text-align: center;
+     
+    }
   }
 
   @media(max-width:1025px){
