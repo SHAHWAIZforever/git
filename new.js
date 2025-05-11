@@ -272,3 +272,79 @@ document.addEventListener("DOMContentLoaded", function () {
       showNextMessage();
     });
   })();
+
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// used in lastfoot
+
+  const btn = document.getElementById('customright');
+const hiddenDiv = document.querySelector('.hidd');
+
+btn.addEventListener('mouseenter', () => {
+  hiddenDiv.style.opacity = '1';
+  hiddenDiv.style.background = '#000';
+  hiddenDiv.style.color = '#fff';
+});
+
+btn.addEventListener('mouseleave', () => {
+  hiddenDiv.style.opacity = '0';
+});
+
+// >>>>>>>>>>>>buttons
+
+// used in #flex section
+
+
+  // document.querySelectorAll('.hover-button').forEach(button => {
+  //   const targetId = button.getAttribute('data-target');
+  //   const box = document.getElementById(targetId);
+  //   let isHovered = false;
+
+  //   const showBox = () => {
+  //     isHovered = true;
+  //     box.style.display = 'block';
+  //   };
+
+  //   const hideBox = () => {
+  //     isHovered = false;
+  //     setTimeout(() => {
+  //       if (!isHovered) {
+  //         box.style.display = 'none';
+  //       }
+  //     }, 100);
+  //   };
+
+  //   button.addEventListener('mouseenter', showBox);
+  //   button.addEventListener('mouseleave', hideBox);
+  //   box.addEventListener('mouseenter', showBox);
+  //   box.addEventListener('mouseleave', hideBox);
+  // });
+
+
+  document.querySelectorAll('.hover-button').forEach(button => {
+    const targetId = button.getAttribute('data-target');
+    const box = document.getElementById(targetId);
+    let isHovered = false;
+  
+    const showBox = () => {
+      isHovered = true;
+      box.style.display = 'block';
+      button.classList.add('active'); // Add underline
+    };
+  
+    const hideBox = () => {
+      isHovered = false;
+      setTimeout(() => {
+        if (!isHovered) {
+          box.style.display = 'none';
+          button.classList.remove('active'); // Remove underline
+        }
+      }, 100);
+    };
+  
+    button.addEventListener('mouseenter', showBox);
+    button.addEventListener('mouseleave', hideBox);
+    box.addEventListener('mouseenter', showBox);
+    box.addEventListener('mouseleave', hideBox);
+  });
+  
